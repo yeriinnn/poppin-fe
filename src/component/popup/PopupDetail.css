@@ -1,0 +1,109 @@
+.popupDetail{
+    margin-left: 150px;
+    margin-right: 200px;
+    position: relative;
+    font-family: 'Pretendard-Regular';
+    font-style: normal;
+}
+
+.display-flex{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.detail-heart, .detail-heart>img{
+    vertical-align: middle;
+}
+
+
+.detail-name{
+width: 403px;
+font-weight: 700;
+font-size: 32px;
+line-height: 40px;
+color: #182135;
+}
+
+.detail-date{
+width: 403px;
+font-weight: 600;
+font-size: 28px;
+line-height: 40px;
+color: #182135;
+}
+
+.detail-lo{
+font-weight: 400;
+font-size: 16px;
+line-height: 24px;
+color: #626264;
+}
+
+.detail-lo>img{
+width: 33px;
+height: auto;
+}
+
+.detail-lo, .detail-lo>img {
+    vertical-align: middle;
+}
+
+.detail-live{
+    margin-left: auto;
+    background-position: center;
+}
+ 
+.detail-live>button{
+    width: 202px;
+    background: #47ABD9;
+    border: 1px solid #47ABD9;
+    border-radius: 90px;
+    padding: 12px 16px;
+
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+
+.detail-title{
+    height: 40px;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 40px;
+    letter-spacing: -0.01em; 
+    color: #000000;
+}
+
+.detail-content{
+    height: 295px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 40px;
+    letter-spacing: -0.01em;
+    color: #000000;
+}
+
+.detail-content2{ 
+    padding: 20px;
+    background: rgba(177, 181, 196, 0.24);
+    letter-spacing: -0.01em;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 40px;
+    color: #000000;
+}
+
+a:visited{
+    color: #000000;
+}
+
+
+
+
+
+
+
+
+
