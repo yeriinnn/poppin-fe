@@ -11,6 +11,9 @@
     justify-content: flex-start;
 }
 
+.detail-heart{
+    margin-bottom: 10px;
+}
 .detail-heart, .detail-heart>img{
     vertical-align: middle;
 }
@@ -66,6 +69,19 @@ height: auto;
     cursor: pointer;
 }
 
+.swiper-container{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: 400px;
+    justify-content: space-evenly;
+    align-items: center;
+       
+}
+.swiper-img{
+    height: 400px;
+    width: 100%;
+    object-fit: contain;
+}
 
 .detail-title{
     height: 40px;
