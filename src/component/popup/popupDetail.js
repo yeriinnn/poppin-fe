@@ -13,23 +13,32 @@ SwiperCore.use([Navigation, Pagination, Autoplay])
 
 function PopupDetail (){
     const params ={
-        spaceBetween : 50,
-        slidesPerView : '2',
+        spaceBetween : 10,
+        slidesPerView : '1',
         centerSlides: true,
-        navigation:{
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev'
-        },
-        
+        loop: true,
+        speed: 600,
+        navigation: true,
         pagination :{
             clickable: true,
             type : 'bullets'
         },
         autoplay : {
-            delay: 2000 
+            delay: 2000,
+            disableOnInteraction: false
         },
         watchOverflow : true, //슬라이드 1개 일 때, pager, button 숨김 여부 설정
-        autoHeight : false
+        autoHeight : false,
+        breakpoints:{
+            '@1.5':{
+                slidesPerView:2,
+                spaceBetween: 2
+            }
+        },
+        style:{
+            "--swiper-pagination-color": "#47ABD9",
+            "--swiper-navigation-color": "#47ABD9",
+        }
     }
 
     return(
@@ -61,6 +70,7 @@ function PopupDetail (){
                         slide 5
                     </SwiperSlide>
                 </Swiper>
+                
             </div>
 
             <br/>
