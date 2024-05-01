@@ -1,38 +1,70 @@
 /* 배경 CSS */
 .popupList{
-    margin-left: 100px;
-    margin-right: 100px;
-    position: relative;
+    margin-left: 10%;
+    margin-right: 10%;
     font-family: 'Pretendard-Regular';
     font-style: normal;
+    display: flex;
+    flex-direction: column;
 }
 
 
 /* Input-fields/Icon-input/Small */
-.inputBox{
-position: relative;
-left: 7.08%;
-right: 16.53%;
-top: 8.1%;
-bottom: 90.1%;
-border: none;
-
-/* Background */
-background: #F7F7F7;
-border-radius: 10px;
-
-/* Placeholder */
-position: absolute;
-height: 24px;
-left: 48px;
-top: 12px;
-
-font-weight: 400;
-font-size: 14px;
-line-height: 24px;
-/* identical to box height, or 171% */
-
-color: #626264;
-
+.list-top{
+    display: flex;
+    margin: 0.625rem 0.625rem 0.625rem 0rem;
 }
 
+.list-top>span{
+    background: #F7F7F7;
+    border-radius: 10px 0px 0px 10px;
+    padding: 5px 5px 5px 5px;
+    align-content: center;
+}
+
+.list-top>span>img{
+    width: 1rem;
+    margin-left: 1rem;
+}
+
+
+.list-search{
+    background: #F7F7F7;
+    border-radius: 0px 10px 10px 0px;
+    border: none;
+    padding: 0.8rem;
+    width: 100%;
+
+    /* font */
+    font-weight: 400;
+    font-size: 14px;
+    
+    color: #626264;
+}
+
+.list-search:focus{
+    outline: none;
+}
+
+.searchBtn{
+    background-color: inherit;
+    border: none;
+}
+
+.searchBtn>img{
+    width: 3.3rem;
+}
+
+.list-container{
+    display: flex;
+    flex-flow: wrap;
+}
+.list-container-wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.list-right{
+    margin-left: auto;
+}

@@ -23,19 +23,27 @@ const PopupList = () => {
 
     return(
         <div className="popupList">
-            <div>
-                <input className="inputBox" placeholder="search for anything"></input>
+            <div className="list-top">
+                <span><img src={require('../../assets/images/search.png')}/></span>
+                <input className="list-search" placeholder="search for anything"></input>
+                <button className="searchBtn" type="button"><img src={require('../../assets/images/searchBtn.png')}/></button>
             </div>
-            <div>
-                {popup.map(popup => (
-                    <PopupBox
-                        key ={popup.id}
-                        name = {popup.name}
-                        start_date = {popup.start_date}
-                        end_date = {popup.start_date}
-                        image={popup.image}
-                    />
-                ))}
+            <div className="list-container-wrapper">
+                
+                <div className="list-container">
+                    {popup.map(popup => (
+                        <PopupBox
+                            key ={popup.id}
+                            name = {popup.name}
+                            start_date = {popup.start_date}
+                            end_date = {popup.start_date}
+                            image={popup.image}
+                        />
+                    ))}
+                </div>
+                <div className="list-right">
+                    list-right 입닏~~~~~
+                </div>
             </div>
         </div>
     );
