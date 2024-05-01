@@ -1,0 +1,38 @@
+/* 배경 CSS */
+.popupList{
+    margin-left: 100px;
+    margin-right: 100px;
+    position: relative;
+    font-family: 'Pretendard-Regular';
+    font-style: normal;
+}
+
+
+/* Input-fields/Icon-input/Small */
+.inputBox{
+position: relative;
+left: 7.08%;
+right: 16.53%;
+top: 8.1%;
+bottom: 90.1%;
+border: none;
+
+/* Background */
+background: #F7F7F7;
+border-radius: 10px;
+
+/* Placeholder */
+position: absolute;
+height: 24px;
+left: 48px;
+top: 12px;
+
+font-weight: 400;
+font-size: 14px;
+line-height: 24px;
+/* identical to box height, or 171% */
+
+color: #626264;
+
+}
+
