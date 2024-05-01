@@ -2,21 +2,20 @@ import React from "react";
 import './css/PopupBox.css';
 import { useNavigate } from "react-router-dom";
 
-const PopupBox = () =>{
+const PopupBox = (props) =>{
     const navigate = useNavigate();
  
     const clickPopupButton = () => {
         navigate("/PopupDetail");
     };
 
-
     return(
         <div className="pbox">
-            <img className="box-img" src={require('../../assets/images/popup1.png')}/>
+            <img className="box-img" src={require('../../assets/images/'+props.image+'.png')}/>
             <div className="box-heart"><img src={require('../../assets/images/heart.png')}/>999+</div>
             <div className="box-inner">
-                <div className="box-name">눈사람 눙눙이 팝업스토어</div>
-                <div className="box-date">팝업 기간 23.09.02 - 24.09.02</div>
+                <div className="box-name">{props.name}</div>
+                <div className="box-date">팝업 기간 {props.start_date}-{props.end_date}</div>
                 <button className="box-btn" onClick={clickPopupButton}>상세보기</button>
             </div>
         </div>
