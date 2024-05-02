@@ -1,0 +1,40 @@
+.filter-container{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.filter-location{
+    align-items: center;
+}
+
+.filter-img{
+    width: 22px;
+    align-items: center
+}
+
+.filter-check{
+    margin: 15px ;
+    
+}
+
+.filter-check>input{
+    margin: 0px 10px 0px 0px;
+    accent-color: #47ABD9;
+    width: 15px;
+    height: 15px;
+    vertical-align: middle;    
+}
+
+.filter-check>input + label{
+    cursor: pointer;
+}
+
+.filter-check>input::after {
+    content: '\2714';
+
+}
+
+.filter-check>label {
+    vertical-align: middle;
+}

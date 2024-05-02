@@ -3,6 +3,7 @@ import './css/PopupList.css';
 import PopupBox from "./PopupBox";
 
 import dbjson from "./popupdb.json";  //임시 데이터
+import PopupFilter from "./PopupFilter";
 
 
 const PopupList = () => {
@@ -41,7 +42,7 @@ const PopupList = () => {
                     ))}
                 </div>
                 <div className="list-right">
-                    list-right 입닏~~~~~
+                    <PopupFilter/>
                 </div>
             </div>
         </div>

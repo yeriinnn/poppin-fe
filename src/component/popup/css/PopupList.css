@@ -61,10 +61,11 @@
 }
 .list-container-wrapper{
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
 }
 
 
 .list-right{
     margin-left: auto;
+    width: 40%;
 }
