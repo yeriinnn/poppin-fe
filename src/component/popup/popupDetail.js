@@ -29,6 +29,7 @@ function PopupDetail (){
         },
         watchOverflow : true, //슬라이드 1개 일 때, pager, button 숨김 여부 설정
         autoHeight : false,
+        touchRatio: 0,  //드래그 막는 기능 
         breakpoints:{
             '@1.5':{
                 slidesPerView:2,
@@ -61,7 +62,7 @@ function PopupDetail (){
                         <img className="swiper-img" src={require('../../assets/images/popup1.png')}/>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <img className="swiper-img" src={require('../../assets/images/heart.png')}/>
+                        <img className="swiper-img" src={require('../../assets/images/popup2.png')}/>
                     </SwiperSlide>
                     <SwiperSlide>
                         <img className="swiper-img" src={require('../../assets/images/popup1.png')}/>
