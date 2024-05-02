@@ -4,9 +4,7 @@ import AppRouter from './component/frame/Router';
 
 function App() {
   return (
-    <div>
-      컨텐츠 요소가 표시됩니다.
-    </div>
+    <AppRouter/>
   );
 }
 

@@ -1,12 +1,12 @@
 import React from "react";
 
-const Bottom = () => {
+const Footer = () => {
     return (
-        <Bottom>
+        <Footer>
             <hr/>
             푸터입니다람쥐
-        </Bottom>
-    )
-}
+        </Footer>
+    );
+};
 
-export default Bottom;
+export default Footer;
