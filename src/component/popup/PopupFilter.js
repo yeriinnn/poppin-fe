@@ -2,19 +2,7 @@ import React, { useState } from "react";
 import "./css/PopupFilter.css";
 
 const PopupFilter = () => {
-  //여러 개의 체크 박스 상태 저장 useState hook 사용
-  const [checkboxStates, setCheckBoxStates] = useState({
-    fashion: false,
-    beauty: false,
-    food: false,
-    celeb: false,
-    digital: false,
-    character: false,
-    living: false,
-    game: false
-  });
-
-  //한국어 번역
+  //-----------------checkBox(카테고리) 처리---------------------
   const category = {
     fashion: '패션',
     beauty: '뷰티',
@@ -25,15 +13,29 @@ const PopupFilter = () => {
     living: '리빙',
     game: '게임'
   }
+
+  //여러 개의 체크 박스 상태 저장 useState hook 사용
+  const [checkboxStates, setCheckBoxStates] = useState({
+    fashion: false,
+    beauty: false,
+    food: false,
+    celeb: false,
+    digital: false,
+    character: false,
+    living: false,
+    game: false,
+  });
   
   //체크 박스 변경 이벤트 핸들러
   const handleCheckboxChange = (event) => {
     const { name, checked } = event.target;   //이벤트 발생한 요소에 접근
+    
+    // checkboxStates상태 변경
     setCheckBoxStates(prevState => ({       //prevState: 이전 상태 (React Hook에서 제공하는 기능)
       ...prevState,
       [name]: checked
-
     }));
+    console.log(name, ': ', checked);
   };
 
   //체크박스 렌더링 함수
@@ -46,7 +48,31 @@ const PopupFilter = () => {
     ));
   };
 
+  //--------------------라디오 버튼(기간) 처리 -------------------
+  //선택된 라디오 버튼 상태
+  const period =[
+    {id: 0, name:"all", label: "모든 팝업"},
+    {id: 1, name:"open", label: "현재 진행 중인 팝업만"},
+    {id: 2, name:"close", label: "종료된 팝업만"}
+  ]
 
+  const [selectedRadio, setSelectedRadio] = useState("open");
+  const handleRadioChange = (event) =>{
+    setSelectedRadio(event.target.id);
+    console.log(event.target.id,': ',event.target.value);
+  }
+
+  const renderRadioButton=()=>{
+    return period.map((period)=>(
+      <div className="filter-check" key={period.id}>
+        <input type="radio" name="period" id={period.name} checked={selectedRadio === period.name} onChange={handleRadioChange}/>
+        <label for={period.name}>{period.label}</label>
+      </div>
+    ));
+  };
+
+
+  //-----------------렌더링------------------
   return (
     <div className="filter-container">
       <div className="filter-location">
@@ -60,19 +86,19 @@ const PopupFilter = () => {
           src={require("../../assets/images/arrow.png")}
         />
       </div>
-      <hr />
+      
+      <hr/>
 
       <div>
         <fieldset>
           <legend>Category</legend>
           {renderCheckBox()}
         </fieldset>
-        <hr />
-      </div>
-      <div>
-      <fieldset>
-          <legend>Period</legend>
-        </fieldset>
+        <hr/>
+        <fieldset>
+            <legend>Period</legend>
+            {renderRadioButton()}
+          </fieldset>
       </div>
     </div>
   );
