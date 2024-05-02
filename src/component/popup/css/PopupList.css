@@ -61,11 +61,10 @@
 }
 .list-container-wrapper{
     display: flex;
+    margin-top: 3%;
     /* justify-content: space-between; */
 }
 
-
 .list-right{
-    margin-left: auto;
     width: 40%;
 }

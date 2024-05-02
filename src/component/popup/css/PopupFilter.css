@@ -1,21 +1,24 @@
 .filter-container{
     display: flex;
     flex-direction: column;
-    
 }
 
 .filter-location{
+    display: flex;
     align-items: center;
 }
 
 .filter-img{
+    padding: 2%;
     width: 22px;
-    align-items: center
 }
 
 .filter-check{
     margin: 15px ;
-    
+}
+
+.right{
+    margin-left: auto;
 }
 
 .filter-check>input{
@@ -28,11 +31,6 @@
 
 .filter-check>input + label{
     cursor: pointer;
-}
-
-.filter-check>input::after {
-    content: '\2714';
-
 }
 
 .filter-check>label {

@@ -1,9 +1,8 @@
 import React, {useState, useEffect} from "react";
 import './css/PopupList.css';
 import PopupBox from "./PopupBox";
-
-import dbjson from "./popupdb.json";  //임시 데이터
 import PopupFilter from "./PopupFilter";
+import dbjson from "./popupdb.json";  //임시 데이터
 
 
 const PopupList = () => {
@@ -29,7 +28,6 @@ const PopupList = () => {
                 <button className="searchBtn" type="button"><img src={require('../../assets/images/searchBtn.png')}/></button>
             </div>
             <div className="list-container-wrapper">
-                
                 <div className="list-container">
                     {popup.map(popup => (
                         <PopupBox
@@ -41,7 +39,7 @@ const PopupList = () => {
                         />
                     ))}
                 </div>
-                <div className="list-right">
+                <div className="list-right right">
                     <PopupFilter/>
                 </div>
             </div>
