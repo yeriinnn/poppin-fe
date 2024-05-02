@@ -14,13 +14,18 @@ position: relative;
 width: 287.58px;
 height: 375px;
 background: #FFFFFF;
-border: 0.816993px solid #B1B5C4;
+box-shadow: 0 0 5px rgba(177, 181, 196, 0.5);
 border-radius: 16px;
-
-margin:0px 17px 17px 0px;
+margin:0px 17px 25px 0px;
 
 font-family: 'Pretendard-Regular';
 font-style: normal;
+transition: transform 0.5s ease, box-shadow 0.4s ease;
+}
+
+.pbox:hover{
+    box-shadow: 0 0 5px rgba(71,171,217, 0.8);
+    transform: scale(1.05);
 }
 
 .box-img{
