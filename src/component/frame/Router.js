@@ -5,7 +5,6 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import PopupList from "../popup/PopupList";
 import PopupDetail from "../popup/PopupDetail";
 
-
 const AppRouter = () =>{
     return(
       <Router>
@@ -14,7 +13,6 @@ const AppRouter = () =>{
             <Route path="PopupDetail" element={<PopupDetail />} />
         </Routes>
       </Router>
-
     );
 }
 

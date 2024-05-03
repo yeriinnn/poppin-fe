@@ -2,10 +2,11 @@ import React from "react";
 
 const Footer = () => {
     return (
-        <Footer>
+        <footer>
             <hr/>
-            푸터입니다람쥐
-        </Footer>
+            푸터입니다!
+            <a href="/PopupList">Popup</a>
+        </footer>
     );
 };
 
