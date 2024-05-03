@@ -18,7 +18,8 @@
     gap: 32px;
   }
   
-  .header-button {
+  /* 기본 버튼 스타일 */
+.header-button {
     padding: 8px 16px;
     border: none;
     border-radius: 4px;
@@ -31,11 +32,12 @@
     font-weight: 400;
     line-height: 16px; /* 88.889% */
     cursor: pointer;
-    outline: none; /* Remove focus outline */
+    outline: none; /* 포커스 표시 제거 */
   }
   
-  /* Hover effect */
-  .header-button:hover {
-    color: #555; /* Change color on hover */
+  /* 클릭 시 효과 */
+  .header-button:active {
+    background-color: #47abd9; /* 클릭 시 배경색 변경 */
   }
+  
   
