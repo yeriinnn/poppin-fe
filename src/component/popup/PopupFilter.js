@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./css/PopupFilter.css";
 
 const PopupFilter = () => {
@@ -42,7 +42,7 @@ const PopupFilter = () => {
   //체크박스 렌더링 함수
   const renderCheckBox = () => {
     return Object.keys(checkboxStates).map((key) => (
-      <div className={`filter-check ${checkboxStates[key] ? "on" : ""}`}>
+      <div className={`filter-check ${checkboxStates[key] ? "on" : ""}` } id="checkBoxDiv">
         <input
           type="checkbox"
           id={key}
@@ -74,6 +74,7 @@ const PopupFilter = () => {
       <div
         className={`filter-check ${selectedRadio === period.name ? "on" : ""}`}
         key={period.id}
+        id="radioDiv"
       >
         <input
           type="radio"
@@ -86,6 +87,40 @@ const PopupFilter = () => {
       </div>
     ));
   };
+
+  //--------------------토글 숨기기 처리-----------------------
+  const [hiddenState, setHiddenStates] = useState({
+    checkBox: false,
+    radio: false
+  });
+
+  const onClickToggle = (event) => {
+    const { id } = event.target; 
+    setHiddenStates((prevState) => ({
+      ...prevState,
+      [id]: !prevState[id],
+    }));
+    
+  };
+  
+  useEffect(() => {
+    Object.keys(hiddenState).map((key) => {
+      const divBlock = document.querySelectorAll(`#${key}Div`);
+      const srcImg = document.querySelector(`#${key}`);
+      divBlock.forEach((divBlock) => {
+        if (hiddenState[key]) {
+          divBlock.style.display = "none";
+          srcImg.src=require("../../assets/images/down.png");
+        } else {
+          divBlock.style.display = "block";
+          srcImg.src=require("../../assets/images/up.png");
+        }
+      });
+  });
+    
+  }, [hiddenState]);
+
+
 
   //-----------------렌더링------------------
   return (
@@ -105,25 +140,33 @@ const PopupFilter = () => {
       <hr />
 
       <div>
+        {/* 카테고리 */}
         <div className="filter-inner">
-          <div className="filter-location bold">Category
+          <div className="filter-location bold">
+            Category
             <img
               className="filter-img right"
+              id="checkBox"
               src={require("../../assets/images/up.png")}
+              onClick={onClickToggle}
             />
           </div>
           {renderCheckBox()}
         </div>
+
+        {/* 기간 */}
         <div className="filter-inner">
-          <div className="filter-location bold">Period
+          <div className="filter-location bold">
+            Period
             <img
               className="filter-img right"
+              id="radio"
               src={require("../../assets/images/up.png")}
+              onClick={onClickToggle}
             />
           </div>
           {renderRadioButton()}
         </div>
-        
       </div>
     </div>
   );
