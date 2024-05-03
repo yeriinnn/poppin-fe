@@ -1,0 +1,36 @@
+.main-header {
+    display: flex;
+    width: 1440px;
+    padding: 20px 57px 20px 124px;
+    align-items: center;
+    gap: 427px;
+  }
+  
+  .header-content {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+  }
+  
+  .header-buttons {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+  }
+  
+  .header-button {
+    /* Customize button styles as needed */
+    padding: 8px 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f0f0f0;
+    color: #333;
+    cursor: pointer;
+  }
+  
+  /* Additional styling for images */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
