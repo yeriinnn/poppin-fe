@@ -1,7 +1,7 @@
 .filter-container {
   display: flex;
   flex-direction: column;
-  width: fit-content;
+  width: 220px;
   padding: 5%;
   box-shadow: 0 0 3px rgba(177, 181, 196, 0.5);
   border-radius: 16px;
@@ -30,7 +30,7 @@
   margin-left: auto;
 }
 
-.filter-check>label, .filter-check>input{
+.filter-check>label, .filter-check>input, .filter-img{
     cursor: pointer;
 }
 
@@ -84,3 +84,4 @@
   padding-left: 0.5em;
   padding-right: 0.75em;
 }
+

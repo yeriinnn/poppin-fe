@@ -38,6 +38,9 @@ const PopupList = () => {
                             image={popup.image}
                         />
                     ))}
+                    <div className="list-bottom">
+                        <button className="moreBtn">Load more +</button>
+                    </div>
                 </div>
                 <div className="list-right right">
                     <PopupFilter/>
