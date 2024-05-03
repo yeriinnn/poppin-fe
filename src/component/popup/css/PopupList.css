@@ -1,88 +1,107 @@
 /* 배경 CSS */
-.popupList{
-    margin-left: 12%;
-    margin-right: 12%;
-    font-family: 'Pretendard-Regular';
-    font-style: normal;
-    display: flex;
-    flex-direction: column;
+.popupList {
+  margin-left: 12%;
+  margin-right: 12%;
+  display: flex;
+  flex-direction: column;
 }
-
 
 /* Input-fields/Icon-input/Small */
-.list-top{
-    display: flex;
-    margin: 0.625rem 0rem 0.625rem 0rem;
-    border-radius: 10px;
-    /* 마우스 올리면 애니메이션 */
-    transition: transform 0.6s ease, box-shadow 0.6s ease;
+.list-top {
+  display: flex;
+  margin: 0.625rem 0rem 0.625rem 0rem;
+  border-radius: 10px;
+  /* 마우스 올리면 애니메이션 */
+  transition: transform 0.6s ease, box-shadow 0.6s ease;
 }
 
-.list-top:hover{
-    transform: scale(1.03);
-    box-shadow: 0 0 5px rgba(177, 181, 196, 0.4);
+.list-top:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 5px rgba(177, 181, 196, 0.4);
 }
 
-.list-top>span{
-    background: #F7F7F7;
-    border-radius: 10px 0px 0px 10px;
-    padding: 5px 5px 5px 5px;
-    align-content: center;
+.list-top > span {
+  background: #f7f7f7;
+  border-radius: 10px 0px 0px 10px;
+  padding: 5px 5px 5px 5px;
+  align-content: center;
 }
 
-.list-top>span>img{
-    width: 1rem;
-    margin-left: 1rem;
+.list-top > span > img {
+  width: 1rem;
+  margin-left: 1rem;
 }
 
-.list-search{
-    background: #F7F7F7;
-    border-radius: 0px 10px 10px 0px;
-    border: none;
-    padding: 0.8rem;
-    width: 100%;
+.list-search {
+  background: #f7f7f7;
+  border-radius: 0px 10px 10px 0px;
+  border: none;
+  padding: 0.8rem;
+  width: 100%;
 
-    /* font */
-    font-weight: 400;
-    font-size: 14px;
-    
-    color: #626264;
+  /* font */
+  font-weight: 400;
+  font-size: 14px;
+
+  color: #626264;
 }
 
-.list-search:focus{
-    outline: none;
+.list-search:focus {
+  outline: none;
 }
 
-.searchBtn{
-    width: fit-content;
-    border-radius: 10px;
-    padding: 0%;
-    margin-left: 2%;
-    background-color: inherit;
-    border: none;
-    cursor: pointer;
+.searchBtn {
+  width: fit-content;
+  border-radius: 10px;
+  padding: 0%;
+  margin-left: 2%;
+  background-color: inherit;
+  border: none;
+  cursor: pointer;
 
-     /* 마우스 올리면 애니메이션 */
-     transition: transform 0.4s ease, box-shadow 0.3s ease;
+  /* 마우스 올리면 애니메이션 */
+  transition: transform 0.4s ease, box-shadow 0.3s ease;
 }
 
-.searchBtn:hover{
-    box-shadow: 0 0 5px rgba(177, 181, 196, 0.4);
-    transform: scale(1.2);
+.searchBtn:hover {
+  box-shadow: 0 0 5px rgba(177, 181, 196, 0.4);
+  transform: scale(1.2);
 }
 
-.searchBtn>img{
-    width: 3.7rem;
+.searchBtn > img {
+  width: 3.7rem;
 }
 
-.list-container{
-    display: flex;
-    flex-flow: wrap;
-    width: fit-content;
+.list-container {
+  display: flex;
+  flex-flow: wrap;
+  width: fit-content;
 }
 
-.list-container-wrapper{
-    display: flex;
-    margin-top: 3%;
-    /* justify-content: space-between; */
+.list-container-wrapper {
+  display: flex;
+  margin-top: 3%;
+  /* justify-content: space-between; */
+}
+
+.list-bottom {
+  display: flex;
+  justify-content: center;
+  margin: 5% 0% 30% 0px;
+  width: 100%;
+}
+
+.moreBtn {
+  display: flex;
+  width: 40%;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  color: white;
+  background-color: #47abd9;
+  cursor: pointer;
+  white-space: nowrap;
+
+  justify-content: center;
+  text-align:center;
 }
