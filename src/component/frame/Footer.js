@@ -1,5 +1,7 @@
 import React from 'react';
 import './css/Footer.css';
+import { Link } from 'react-router-dom';
+
 
 const Footer = () => {
     return (
@@ -26,11 +28,12 @@ const Footer = () => {
                     </div>
                 </div>
                 <div className="footer-buttons">
-                    <button className="footer-button"><strong>Popup</strong></button>
-                    <button className="footer-button"><strong>Map</strong></button>
-                    <button className="footer-button"><strong>Live</strong></button>
+                    <a href="/popup" className="footer-button" style={{ textDecoration: 'none' }}><strong>Popup</strong></a>
+                    <a href="/Map" className="footer-button" style={{ textDecoration: 'none' }}><strong>Map</strong></a>
+                    <a href="/Live" className="footer-button" style={{ textDecoration: 'none' }}><strong>Live</strong></a>
                     <div className="mypage-buttons">
-                        <button className="footer-button"><strong>Mypage</strong></button>
+                        <a href="/mypage" className="footer-button" style={{ textDecoration: 'none' }}><strong>Mypage</strong></a>
+                        {/* 추후에 링크 주소 보고 추가할 예정 */}
                         <button className="footer-button">정보 수정</button>
                         <button className="footer-button">찜 목록</button>
                         <button className="footer-button">My payments</button>

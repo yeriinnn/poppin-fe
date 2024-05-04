@@ -37,6 +37,11 @@
     line-height: 16px;
 }
 
+/* 버튼을 눌렀을 때의 스타일 */
+.footer-button:active {
+    color: #363940;
+}
+
 .footer-content {
     display: flex;
     display: row;
