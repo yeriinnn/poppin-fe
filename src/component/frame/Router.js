@@ -15,7 +15,6 @@ const AppRouter = () =>{
             <Route path="Signup" element={<Signup/>} />
         </Routes>
       </Router>
-
     );
 }
 
