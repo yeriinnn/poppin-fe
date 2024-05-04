@@ -22,8 +22,6 @@ const PopupList = () => {
 
   return (
     <div>
-      <Header />
-
       <div className="popupList">
         <div className="list-top">
           <span>
