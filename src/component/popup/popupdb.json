@@ -46,5 +46,53 @@
         "end_date" : "23.12.03",
         "created_date" : "23.9.01",
         "image" : "popup2"
+    },
+    {
+        "id" : "1",
+        "name" : "눈사람 눙눙이 팝업스토어",
+        "start_date" : "23.09.02",
+        "end_date" : "23.10.02",
+        "created_date" : "23.08.02",
+        "image" : "popup1"
+    },
+    {
+        "id" : "1",
+        "name" : "눈사람 눙눙이 팝업스토어",
+        "start_date" : "23.09.02",
+        "end_date" : "23.10.02",
+        "created_date" : "23.08.02",
+        "image" : "popup1"
+    },
+    {
+        "id" : "2",
+        "name" : "해리포터 팝업스토어",
+        "start_date" : "23.10.15",
+        "end_date" : "23.12.03",
+        "created_date" : "23.9.01",
+        "image" : "popup2"
+    },
+    {
+        "id" : "1",
+        "name" : "눈사람 눙눙이 팝업스토어",
+        "start_date" : "23.09.02",
+        "end_date" : "23.10.02",
+        "created_date" : "23.08.02",
+        "image" : "popup1"
+    },
+    {
+        "id" : "2",
+        "name" : "해리포터 팝업스토어",
+        "start_date" : "23.10.15",
+        "end_date" : "23.12.03",
+        "created_date" : "23.9.01",
+        "image" : "popup2"
+    },
+    {
+        "id" : "1",
+        "name" : "눈사람 눙눙이 팝업스토어",
+        "start_date" : "23.09.02",
+        "end_date" : "23.10.02",
+        "created_date" : "23.08.02",
+        "image" : "popup1"
     }
 ]

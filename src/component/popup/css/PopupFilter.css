@@ -1,40 +1,87 @@
-.filter-container{
-    display: flex;
-    flex-direction: column;
-    
+.filter-container {
+  display: flex;
+  flex-direction: column;
+  width: 220px;
+  padding: 5%;
+  box-shadow: 0 0 3px rgba(177, 181, 196, 0.5);
+  border-radius: 16px;
+
+  /* 스크롤 시 자연스럽게 따라 내려가기 */
+  position: sticky;
+  top: 100px;
 }
 
-.filter-location{
-    align-items: center;
+.filter-location {
+  display: flex;
+  align-items: center;
 }
 
-.filter-img{
-    width: 22px;
-    align-items: center
+.filter-img {
+  padding: 2%;
+  width: 10%;
 }
 
-.filter-check{
-    margin: 15px ;
-    
+.filter-check {
+  margin: 15px;
+  white-space: nowrap;
 }
 
-.filter-check>input{
-    margin: 0px 10px 0px 0px;
-    accent-color: #47ABD9;
-    width: 15px;
-    height: 15px;
-    vertical-align: middle;    
+.right {
+  margin-left: auto;
 }
 
-.filter-check>input + label{
+.filter-check>label, .filter-check>input, .filter-img{
     cursor: pointer;
 }
 
-.filter-check>input::after {
-    content: '\2714';
+.filter-check > input {
+  margin: 0px 10px 0px 0px;
+  width: 15px;
+  height: 15px;
+  vertical-align: middle;
 
+  box-shadow: 0 0 0 1px #d9dadb;
+  appearance: none;
+  
 }
 
-.filter-check>label {
-    vertical-align: middle;
+.filter-check > input[type="checkbox"] {
+  border-radius: 3px;
 }
+
+.filter-check > input[type="checkbox"]:checked {
+  box-shadow: 0 0 0 1px #47abd9;
+  background-color: #47abd9;
+  background: url(../../../assets/images/check.png) no-repeat;
+  background-position: center center;
+  background-size: 110%;
+}
+
+.filter-check > input[type="radio"] {
+  border-radius: 50%;
+  border: 3px solid white;
+  background-color: white;
+}
+
+.filter-check > input[type="radio"]:checked {
+  background-color: #47abd9;
+}
+
+.on {
+  color: #47abd9;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.filter-inner {
+  display: block;
+  margin-left: 2px;
+  margin-right: 2px;
+  padding-top: 0.35em;
+  padding-bottom: 0.625em;
+  padding-left: 0.5em;
+  padding-right: 0.75em;
+}
+
