@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import PopupList from "../popup/PopupList";
 import PopupDetail from "../popup/PopupDetail";
 import Signup from "../myPage/Signup";
+import Map from "../Map/Map"
 
 const AppRouter = () =>{
     return(
@@ -13,6 +14,7 @@ const AppRouter = () =>{
             <Route path="PopupList" element={<PopupList />} />
             <Route path="popupdetail/:id" element={<PopupDetail />} />
             <Route path="Signup" element={<Signup/>} />
+            <Route path="Map" element={<Map/>} />
         </Routes>
       </Router>
     );
