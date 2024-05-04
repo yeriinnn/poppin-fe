@@ -20,6 +20,11 @@ const Map = () => {
         setSelectedCategory(category);
     };
 
+    const [selectedSubregion, setSelectedSubregion] = useState(null);
+    const handleSubregionSelection = (subregion) => {
+        setSelectedSubregion(subregion);
+    };
+
     return (
         <map className="map-page">
             <div className="standards">
@@ -85,6 +90,26 @@ const Map = () => {
                         </button>
                     </div>
                 </div>
+
+                {selectedRegion === "Seoul" && (
+                    <div className="subregion">
+                        <div className="subregion-buttons">
+                            <button
+                                className={"subregion-button " + (selectedSubregion === "Gangnam" ? "selected" : "")}
+                                onClick={() => handleSubregionSelection("Gangnam")}
+                            >
+                                강남구
+                            </button>
+                            <button
+                                className={"subregion-button " + (selectedSubregion === "Gwanak" ? "selected" : "")}
+                                onClick={() => handleSubregionSelection("Gwanak")}
+                            >
+                                관악구
+                            </button>
+                        </div>
+                    </div>
+                )}
+
                 <div className="category">
                     <div className="category-text" style={{ fontSize: "32px" }}>
                         <strong>카테고리</strong>
@@ -152,7 +177,6 @@ const Map = () => {
                         </button>
                     </div>
                 </div>
-
             </div>
         </map>
     );

@@ -7,7 +7,7 @@
     margin-top: 20px;
 }
 
-.date-text, .region-text, .category-text{
+.date-text, .region-text, .category-text,.subregion-text{
     width: 120px;
 }
 
@@ -19,9 +19,18 @@
     align-items: flex-start;
 }
 
+.subregion-buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin-left: 150px;
+    margin-top: 20px;
+}
+
 .date-button,
 .region-button,
-.category-button {
+.category-button,
+.subregion-button {
     width: 111px;
     height: 46px;
     margin-left: 20px;
@@ -37,7 +46,8 @@
 
 .date-button.selected,
 .region-button.selected,
-.category-button.selected {
+.category-button.selected,
+.subregion-button.selected {
     background-color: #47ABD9;
     color: #FFFFFF;
 }
