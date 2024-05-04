@@ -2,6 +2,18 @@ import React, { useState } from "react";
 import "./css/Map.css";
 
 const Map = () => {
+    const [selectedDate, setSelectedDate] = useState(null);
+
+    const handleDateSelection = (date) => {
+        setSelectedDate(date);
+    };
+
+    const [selectedRegion, setSelectedRegion] = useState(null);
+
+    const handleRegionSelection = (region) => {
+        setSelectedRegion(region);
+    };
+
     const [selectedCategory, setSelectedCategory] = useState(null);
 
     const handleCategorySelection = (category) => {
@@ -17,20 +29,20 @@ const Map = () => {
                     </div>
                     <div className="date-buttons">
                         <button
-                            className={"date-button " + (selectedCategory === null ? "selected" : "")}
-                            onClick={() => handleCategorySelection(null)}
+                            className={"date-button " + (selectedDate === null ? "selected" : "")}
+                            onClick={() => handleDateSelection(null)}
                         >
                             오늘
                         </button>
                         <button
-                            className={"date-button " + (selectedCategory === 7 ? "selected" : "")}
-                            onClick={() => handleCategorySelection(7)}
+                            className={"date-button " + (selectedDate === 7 ? "selected" : "")}
+                            onClick={() => handleDateSelection(7)}
                         >
                             +7일
                         </button>
                         <button
-                            className={"date-button " + (selectedCategory === 14 ? "selected" : "")}
-                            onClick={() => handleCategorySelection(14)}
+                            className={"date-button " + (selectedDate === 14 ? "selected" : "")}
+                            onClick={() => handleDateSelection(14)}
                         >
                             +14일
                         </button>
@@ -73,20 +85,21 @@ const Map = () => {
                             전체
                         </button>
                         <button
-                            className={"category-button " + (selectedCategory === fasihion ? "selected" : "")}
-                            onClick={() => handleCategorySelection(fashion)}
+                            className={"category-button " + (selectedCategory === "fashion" ? "selected" : "")}
+                            onClick={() => handleCategorySelection("fashion")}
                         >
                             패션
                         </button>
                         <button
-                            className={"category-button " + (selectedCategory === music ? "selected" : "")}
-                            onClick={() => handleCategorySelection(music)}
+                            className={"category-button " + (selectedCategory === "music" ? "selected" : "")}
+                            onClick={() => handleCategorySelection("music")}
                         >
                             음악
                         </button>
                         {/* 다른 카테고리 버튼들을 추가 */}
                     </div>
                 </div>
+
             </div>
         </map>
     );
