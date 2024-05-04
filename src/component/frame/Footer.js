@@ -6,8 +6,8 @@ const Footer = () => {
         <footer className="main-footer">
             <img className="logo" src="/images/popin.png" alt="Logo" />
             <div className="footer-content">
-                <div className="footer-contact">
-                    Contact us
+                <div className="footer-contact" style={{ fontSize: "17px", color: "#3B5266" }}>
+                    <strong>Contact us</strong>
                     <br />
                     popin@gmail.com
                     <br /><br />
@@ -26,17 +26,21 @@ const Footer = () => {
                     </div>
                 </div>
                 <div className="footer-buttons">
-                    <button className="footer-button">Popup</button>
-                    <button className="footer-button">Map</button>
-                    <button className="footer-button">Live</button>
-                    <button className="footer-button">Mypage</button>
+                    <button className="footer-button"><strong>Popup</strong></button>
+                    <button className="footer-button"><strong>Map</strong></button>
+                    <button className="footer-button"><strong>Live</strong></button>
                     <div className="mypage-buttons">
-                        <button className="footer-button">Settings</button>
-                        <button className="footer-button">Logout</button>
+                        <button className="footer-button"><strong>Mypage</strong></button>
+                        <button className="footer-button">정보 수정</button>
+                        <button className="footer-button">찜 목록</button>
+                        <button className="footer-button">My payments</button>
+                        <button className="footer-button">나의 채팅</button>
                     </div>
                 </div>
+
             </div>
-            <div className="footer-copyright">
+            <div className="footer-copyright" style={{ color: "#95A1BB" }}>
+                <br />
                 Copyright © 2024. Plick
             </div>
         </footer>
