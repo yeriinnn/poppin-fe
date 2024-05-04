@@ -51,6 +51,7 @@ width: 49.02px;
 height: 17px;
 left: 228.76px;
 top: 250px;
+vertical-align: middle;
 
 font-weight: 400;
 font-size: 9.80392px;
@@ -58,14 +59,11 @@ line-height: 16px;
 }
 
 .box-heart>img{
+margin-right: 8%;
+vertical-align: middle;
 width: 17px;
 height: 15.6;
 } 
-
-.box-heart, .box-heart>img{
-    vertical-align: middle;
-}
-
 
 /* 팝업스토어 */
 .box-name{

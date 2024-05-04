@@ -10,7 +10,7 @@ const AppRouter = () =>{
     return(
       <Router>
         <Routes>
-            <Route path="popuplist" element={<PopupList />} />
+            <Route path="popup" element={<PopupList />} />
             <Route path="popupdetail/:id" element={<PopupDetail />} />
             <Route path="Signup" element={<Signup/>} />
         </Routes>

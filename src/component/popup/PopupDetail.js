@@ -65,7 +65,6 @@ const PopupDetail = () => {
   console.log(id);
   return (
     <div>
-      <Header /> {/* 헤더 컴포넌트 추가 */}
       <div className="popupDetail">
         <div>
           <div className="detail-heart">

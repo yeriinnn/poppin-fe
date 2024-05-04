@@ -22,8 +22,6 @@ const PopupList = () => {
 
   return (
     <div>
-      <Header />
-
       <div className="popupList">
         <div className="list-top">
           <span>
@@ -46,6 +44,7 @@ const PopupList = () => {
                 start_date={popup.start_date}
                 end_date={popup.start_date}
                 image={popup.image}
+                heart={popup.heart}
               />
             ))}
             <div className="list-bottom">
