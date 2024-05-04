@@ -46,6 +46,7 @@ const PopupList = () => {
                 start_date={popup.start_date}
                 end_date={popup.start_date}
                 image={popup.image}
+                heart={popup.heart}
               />
             ))}
             <div className="list-bottom">
