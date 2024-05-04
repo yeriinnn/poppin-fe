@@ -91,12 +91,53 @@ const Map = () => {
                             패션
                         </button>
                         <button
+                            className={"category-button " + (selectedCategory === "beauty" ? "selected" : "")}
+                            onClick={() => handleCategorySelection("beauty")}
+                        >
+                            뷰티
+                        </button>
+                        <button
                             className={"category-button " + (selectedCategory === "music" ? "selected" : "")}
                             onClick={() => handleCategorySelection("music")}
                         >
                             음악
                         </button>
-                        {/* 다른 카테고리 버튼들을 추가 */}
+                        <button
+                            className={"category-button " + (selectedCategory === "food" ? "selected" : "")}
+                            onClick={() => handleCategorySelection("food")}
+                        >
+                            음식
+                        </button>
+                        <button
+                            className={"category-button " + (selectedCategory === "celeb" ? "selected" : "")}
+                            onClick={() => handleCategorySelection("celeb")}
+                        >
+                            연예
+                        </button>
+                        <button
+                            className={"category-button " + (selectedCategory === "character" ? "selected" : "")}
+                            onClick={() => handleCategorySelection("character")}
+                        >
+                            캐릭터
+                        </button>
+                        <button
+                            className={"category-button " + (selectedCategory === "digital" ? "selected" : "")}
+                            onClick={() => handleCategorySelection("digital")}
+                        >
+                            가전/디지털
+                        </button>
+                        <button
+                            className={"category-button " + (selectedCategory === "living" ? "selected" : "")}
+                            onClick={() => handleCategorySelection("living")}
+                        >
+                            리빙
+                        </button>
+                        <button
+                            className={"category-button " + (selectedCategory === "game" ? "selected" : "")}
+                            onClick={() => handleCategorySelection("game")}
+                        >
+                            게임
+                        </button>
                     </div>
                 </div>
 

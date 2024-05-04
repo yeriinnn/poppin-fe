@@ -36,8 +36,8 @@
 }
 
 .date-button.selected,
-.region-button.date-button.selected,
-.category-button.date-button.selected {
+.region-button.selected,
+.category-button.selected {
     background-color: #47ABD9;
     color: #FFFFFF;
 }
