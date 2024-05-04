@@ -57,19 +57,31 @@ const Map = () => {
                             className={"region-button " + (selectedRegion === null ? "selected" : "")}
                             onClick={() => handleRegionSelection(null)}
                         >
-                            서울
+                            전체
                         </button>
                         <button
-                            className={"region-button " + (selectedCategory === 1 ? "selected" : "")}
-                            onClick={() => handleRegionSelection(1)}
+                            className={"region-button " + (selectedRegion === "Seoul" ? "selected" : "")}
+                            onClick={() => handleRegionSelection("Seoul")}
                         >
-                            부산
+                            서울특별시
                         </button>
                         <button
-                            className={"region-button " + (selectedCategory === 2 ? "selected" : "")}
-                            onClick={() => handleRegionSelection(2)}
+                            className={"region-button " + (selectedRegion === "Gyeonggi" ? "selected" : "")}
+                            onClick={() => handleRegionSelection("Gyeonggi")}
                         >
-                            대구
+                            경기도
+                        </button>
+                        <button
+                            className={"region-button " + (selectedRegion === "Incheon" ? "selected" : "")}
+                            onClick={() => handleRegionSelection("Incheon")}
+                        >
+                            인천광역시
+                        </button>
+                        <button
+                            className={"region-button " + (selectedRegion === "Busan" ? "selected" : "")}
+                            onClick={() => handleRegionSelection("Busan")}
+                        >
+                            부산광역시
                         </button>
                     </div>
                 </div>
