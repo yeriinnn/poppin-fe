@@ -5,8 +5,8 @@ import { useNavigate } from "react-router-dom";
 const PopupBox = (props) =>{
     const navigate = useNavigate();
  
-    const clickPopupButton = () => {
-        navigate("/PopupDetail");
+    const clickPopupButton = (item) => {
+        navigate("/PopupDetail/${item.id}");
     };
 
     return(
@@ -16,7 +16,7 @@ const PopupBox = (props) =>{
             <div className="box-inner">
                 <div className="box-name">{props.name}</div>
                 <div className="box-date">팝업 기간 {props.start_date}-{props.end_date}</div>
-                <button className="box-btn" onClick={clickPopupButton}>상세보기</button>
+                <button className="box-btn" onClick={() => clickPopupButton(props)}>상세보기</button>
             </div>
         </div>
     );

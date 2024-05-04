@@ -16,14 +16,14 @@ const PopupFilter = () => {
 
   //여러 개의 체크 박스 상태 저장 useState hook 사용
   const [checkboxStates, setCheckBoxStates] = useState({
-    fashion: false,
-    beauty: false,
-    food: false,
-    celeb: false,
-    digital: false,
-    character: false,
-    living: false,
-    game: false,
+    fashion: true,
+    beauty: true,
+    food: true,
+    celeb: true,
+    digital: true,
+    character: true,
+    living: true,
+    game: true,
   });
 
   //체크 박스 변경 이벤트 핸들러
@@ -42,7 +42,10 @@ const PopupFilter = () => {
   //체크박스 렌더링 함수
   const renderCheckBox = () => {
     return Object.keys(checkboxStates).map((key) => (
-      <div className={`filter-check ${checkboxStates[key] ? "on" : ""}` } id="checkBoxDiv">
+      <div
+        className={`filter-check ${checkboxStates[key] ? "on" : ""}`}
+        id="checkBoxDiv"
+      >
         <input
           type="checkbox"
           id={key}
@@ -91,36 +94,40 @@ const PopupFilter = () => {
   //--------------------토글 숨기기 처리-----------------------
   const [hiddenState, setHiddenStates] = useState({
     checkBox: false,
-    radio: false
+    radio: false,
   });
 
   const onClickToggle = (event) => {
-    const { id } = event.target; 
+    const { id } = event.target;
     setHiddenStates((prevState) => ({
       ...prevState,
       [id]: !prevState[id],
     }));
-    
   };
-  
+
   useEffect(() => {
     Object.keys(hiddenState).map((key) => {
       const divBlock = document.querySelectorAll(`#${key}Div`);
       const srcImg = document.querySelector(`#${key}`);
       divBlock.forEach((divBlock) => {
         if (hiddenState[key]) {
-          divBlock.style.display = "none";
-          srcImg.src=require("../../assets/images/down.png");
+          divBlock.classList.remove("appear"); // appear
+          divBlock.classList.add("disappear"); // disappear 클래스 추가
+          setTimeout(() => {
+            divBlock.style.display = "none";
+            srcImg.src = require("../../assets/images/down.png");
+          }, 150); // disappear 클래스 추가
         } else {
-          divBlock.style.display = "block";
-          srcImg.src=require("../../assets/images/up.png");
+          divBlock.classList.remove("disappear"); // disappear 클래스 제거
+          divBlock.style.display = "flex";
+          divBlock.classList.add("appear"); // appear 클래스 추가
+          setTimeout(() => {
+            srcImg.src = require("../../assets/images/up.png");
+          }, 150); // disappear 클래스 추가
         }
       });
-  });
-    
+    });
   }, [hiddenState]);
-
-
 
   //-----------------렌더링------------------
   return (

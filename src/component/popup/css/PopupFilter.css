@@ -26,6 +26,34 @@
   white-space: nowrap;
 }
 
+.appear{
+  animation: fade-in 0.5s;
+  animation-fill-mode: forwards;
+}
+
+.disappear {
+  animation: fade-out 0.3s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fade-in {
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  from{
+    opacity: 1;
+  }
+  to{
+    opacity: 0;
+  }
+}
+
 .right {
   margin-left: auto;
 }
