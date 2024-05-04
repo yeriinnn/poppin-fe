@@ -1,0 +1,60 @@
+.main-header {
+  display: flex;
+  width: 1440px;
+  padding: 20px 57px 20px 124px;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #E6E8EC;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-buttons {
+  display: flex;
+}
+
+/* 기본 버튼 스타일 */
+.header-button, .special-button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  background-color: transparent;
+  color: #777e90;
+  text-align: center;
+  font-family: 'Pretendard', sans-serif;
+  cursor: pointer;
+  outline: none;
+  transition: color 0.3s; 
+}
+
+.header-button {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 200;
+  line-height: 16px;
+  margin-right: 32px; 
+}
+
+.special-button {
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 100%;
+  margin-right: 20px; 
+}
+
+/* Live 버튼과 Sign In 버튼 간의 간격 조절 */
+.header-buttons .header-button:nth-child(3) {
+  margin-right: 427px; /* Live 버튼 오른쪽 간격 조절 */
+}
+
+/* 텍스트 버튼 클릭 또는 포커스 시 글씨색 변경 */
+.header-button:active,
+.header-button:focus,
+.special-button:active,
+.special-button:focus {
+  color: #47ABD9;
+}

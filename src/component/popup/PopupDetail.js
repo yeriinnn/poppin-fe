@@ -1,4 +1,5 @@
 import React from "react";
+import Header from '../frame/Header';
 import './css/PopupDetail.css';
 import {Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, {Navigation, Pagination, Autoplay, FreeMode} from 'swiper';
@@ -44,6 +45,7 @@ function PopupDetail (){
 
     return(
         <div className="popupDetail">
+            <Header /> {/* 헤더 컴포넌트 추가 */}
             <div>
                 <div className="detail-heart"><img src={require('../../assets/images/heart.png')}/> 999+</div>
                 <div className="display-flex">
