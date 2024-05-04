@@ -18,6 +18,7 @@
 .list-top:hover {
   transform: scale(1.03);
   box-shadow: 0 0 5px rgba(177, 181, 196, 0.4);
+  filter: brightness(98%);
 }
 
 .list-top > span {
@@ -66,6 +67,7 @@
 .searchBtn:hover {
   box-shadow: 0 0 5px rgba(177, 181, 196, 0.4);
   transform: scale(1.2);
+  filter: brightness(97%);
 }
 
 .searchBtn > img {
@@ -95,7 +97,7 @@
   display: flex;
   width: 40%;
   padding: 10px;
-  border-radius: 10px;
+  border-radius: 25px;
   border: none;
   color: white;
   background-color: #47abd9;
@@ -104,4 +106,10 @@
 
   justify-content: center;
   text-align:center;
+  transition: transform 0.5s ease;
+}
+
+.moreBtn:hover{
+  filter: brightness(90%);
+  transform: scale(1.03);
 }
