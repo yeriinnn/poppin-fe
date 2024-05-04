@@ -1,3 +1,8 @@
+.map-page {
+    display: flex;
+    flex-direction: row;
+}
+
 .date,
 .region,
 .category {
@@ -7,7 +12,10 @@
     margin-top: 20px;
 }
 
-.date-text, .region-text, .category-text,.subregion-text{
+.date-text,
+.region-text,
+.category-text,
+.subregion-text {
     width: 120px;
 }
 
@@ -44,10 +52,31 @@
     font-size: 17px;
 }
 
+.search-button {
+    width: 111px;
+    height: 46px;
+    margin-left: 20px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 30px;
+    background-color: #47ABD9;
+    color: #FFFFFF;
+    text-align: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: color 0.2s;
+    font-size: 20px;
+}
+
 .date-button.selected,
 .region-button.selected,
 .category-button.selected,
 .subregion-button.selected {
     background-color: #47ABD9;
     color: #FFFFFF;
+}
+
+.ic-search{
+    margin-right: 12px;
+    margin-top: 4px;
 }

@@ -25,6 +25,11 @@ const Map = () => {
         setSelectedSubregion(subregion);
     };
 
+    const handleSearch = () => {
+        // 조회 기능 추가
+        console.log("조회 버튼 클릭됨");
+    };
+
     return (
         <map className="map-page">
             <div className="standards">
@@ -177,6 +182,15 @@ const Map = () => {
                         </button>
                     </div>
                 </div>
+            </div>
+            <div className="search">
+                <button
+                    className={"search-button"}
+                    onClick={handleSearch}
+                >
+                    <img className="ic-search" src="/images/ic_search.png" alt="ic-search" />
+                    조회
+                </button>
             </div>
         </map>
     );
