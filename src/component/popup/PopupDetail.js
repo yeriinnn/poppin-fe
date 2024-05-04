@@ -44,8 +44,9 @@ function PopupDetail (){
     }
 
     return(
-        <div className="popupDetail">
+        <div>
             <Header /> {/* 헤더 컴포넌트 추가 */}
+        <div className="popupDetail">
             <div>
                 <div className="detail-heart"><img src={require('../../assets/images/heart.png')}/> 999+</div>
                 <div className="display-flex">
@@ -115,7 +116,7 @@ function PopupDetail (){
                 </div>
             </div>
         </div>
-
+        </div>
     );
 }
 
