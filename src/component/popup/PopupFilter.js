@@ -16,14 +16,14 @@ const PopupFilter = () => {
 
   //여러 개의 체크 박스 상태 저장 useState hook 사용
   const [checkboxStates, setCheckBoxStates] = useState({
-    fashion: false,
-    beauty: false,
-    food: false,
-    celeb: false,
-    digital: false,
-    character: false,
-    living: false,
-    game: false,
+    fashion: true,
+    beauty: true,
+    food: true,
+    celeb: true,
+    digital: true,
+    character: true,
+    living: true,
+    game: true,
   });
 
   //체크 박스 변경 이벤트 핸들러
