@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import "./css/Map.css";
-import KakaoMap from "./KakaoMap.js";
 
 const Map = () => {
     const [selectedDate, setSelectedDate] = useState(null);
@@ -218,7 +217,7 @@ const Map = () => {
                     </button>
                 </div>
             </div>
-            <div id="map" style={{ width: "70%", height: "400px" }}></div>
+            <div id="map"></div>
         </div>
     );
 };
