@@ -1,3 +1,8 @@
+.whole-page{
+    display: flex;
+    flex-direction: column;
+}
+
 .map-page {
     display: flex;
     flex-direction: row;
