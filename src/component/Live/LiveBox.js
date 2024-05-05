@@ -1,5 +1,5 @@
 import React from "react";
-import '../Live/css';
+import './css/LiveBox.css';
 import { useNavigate } from "react-router-dom";
 
 const LiveBox = (props) =>{
