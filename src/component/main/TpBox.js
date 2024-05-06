@@ -5,6 +5,10 @@ const TpBox = ({ imgSrc, productName, popupPeriod }) => {
   return (
     <div className="tpbox">
       <img src={imgSrc} alt="Product" className="tpbox-img" />
+      <div className="tpbox-heart">
+        <img src={require("../../assets/images/mainboxheart.png")} />
+        <span>999+</span>
+      </div>
       <div className="tpbox-inner">
         <div className="tpbox-name">{productName}</div>
         <div className="tpbox-date">{popupPeriod}</div>
