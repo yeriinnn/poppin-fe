@@ -13,8 +13,8 @@ const Header = () => {
           <button className="header-button">Live</button>
         </div>
         <div className="header-buttons">
-          <button className="header-button special-button">Sign In</button>
-          <button className="header-button special-button">Join</button>
+          <button className="header-button special-button"><strong>Sign In</strong></button>
+          <button className="header-button special-button"><strong>Join</strong></button>
         </div>
       </div>
     </header>
