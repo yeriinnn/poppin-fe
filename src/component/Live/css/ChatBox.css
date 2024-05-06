@@ -43,7 +43,22 @@
 
 .white-inner-rectangle{
     display: flex;
+    flex-direction: row;
+    align-items: center;
     background-color: #FFFFFF;
     width: 100%;
     height: 90%;
+}
+
+.message-image, .new-message-image{
+    width: 32px;
+    height: 32px;
+    margin: 5px
+}
+
+.user-popup-title{
+    margin-left: 2px;
+    color: #777E90;
+    font-size: 16px;
+    font-weight: bold; 
 }
