@@ -14,7 +14,7 @@ const LiveBox = (props) => {
             <img className="chat-box-img" src={require('../../assets/images/' + props.image + '.png')} />
             <div className="chat-box-content">
                 <div className="chat-box-basic-info">
-                    <div className="chat-box-name">{props.name}</div>
+                    <div className="chat-box-name"><strong>{props.name}</strong></div>
                     <div className="chat-box-date"> {props.start_date}-{props.end_date}</div>
                     <div className="chat-box-address">{props.city} {props.local} {props.location}</div>
                 </div>
