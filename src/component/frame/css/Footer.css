@@ -9,10 +9,10 @@
     flex-direction: column;
 }
 
-.logo {
+.footer-logo {
     width: 153px;
     height: auto;
-    margin-left: 315px;
+    margin-left: 17%;
     margin-right: auto;
 }
 
