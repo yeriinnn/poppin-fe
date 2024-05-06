@@ -8,7 +8,7 @@ import Signup from "../myPage/Signup";
 import Map from "../map/Map"
 import KakaoMap from "../map/KakaoMap";
 import Live from "../live/Live";
-import Main from "../main/main";
+import Main from "../main/Main";
 import Login from "../myPage/Login";
 
 const AppRouter = () =>{
