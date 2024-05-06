@@ -1,0 +1,14 @@
+.chat-message-list{
+    display:flex;
+    flex-direction: column;
+    width: 100%;
+    height:100%;
+}
+
+
+.blue-rectangle{
+    display: flex;
+    background-color: #47ABD9;
+    width: 100%;
+    height: 50px;
+}
