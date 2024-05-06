@@ -1,7 +1,8 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
-//페이지
+import Login from "../myPage/Login";
+import Main from "../main/Main";
 import PopupList from "../popup/PopupList";
 import PopupDetail from "../popup/PopupDetail";
 import Signup from "../myPage/Signup";
@@ -9,8 +10,6 @@ import Map from "../map/Map"
 import KakaoMap from "../map/KakaoMap";
 import Live from "../live/Live";
 import Chat from "../live/Chat";;
-import Main from "../main/Main";
-import Login from "../myPage/Login";
 
 const AppRouter = () =>{
     return(
