@@ -1,0 +1,110 @@
+/* toppopupBox CSS */
+.tpbox{
+display: flex;
+align-items: flex-start;
+gap: 32.68px;
+box-sizing: border-box;
+position: relative;
+width: 287.58px;
+height: 375px;
+background: #FFFFFF;
+box-shadow: 0 0 5px rgba(177, 181, 196, 0.5);
+border-radius: 16px;
+margin:0px 17px 25px 0px;
+
+font-family: 'Pretendard-Regular';
+font-style: normal;
+transition: transform 0.5s ease, box-shadow 0.4s ease;
+}
+
+.tpbox:hover{
+    box-shadow: 0 0 5px rgba(71,171,217, 0.8);
+    transform: scale(1.05);
+    filter: brightness(97%);
+}
+
+.tpbox-img{
+position: relative;
+width: 287.58px;
+height: 223.04px;
+border-radius: 16px 16px 0px 0px;
+}
+
+.tpbox-inner{
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 6.54px;
+
+position: absolute;
+width: 203.43px;
+height: 93.48px;
+left: 20.43px;
+top: 250px;
+}
+
+
+.tpbox-heart{
+position: absolute;
+width: 49.02px;
+height: 17px;
+left: 228.76px;
+top: 250px;
+vertical-align: middle;
+
+font-weight: 400;
+font-size: 9.80392px;
+line-height: 16px;
+}
+
+.tpbox-heart>img{
+margin-right: 8%;
+vertical-align: middle;
+width: 17px;
+height: 15.6;
+} 
+
+/* 팝업스토어 */
+.tpbox-name{
+font-weight: 700;
+font-size: 13.0719px;
+line-height: 20px;
+color: #141416;
+}
+
+
+/* 팝업 기간 23.09.02 - 24.09.02 */
+.tpbox-date{
+font-weight: 400;
+font-size: 9.80392px;
+line-height: 25px;
+color: #141416;
+}
+
+
+/* button */
+
+.tpbox-btn{
+cursor: pointer;
+justify-content: center;
+align-items: center;
+padding: 9.80392px 13.0719px;
+gap: 9.8px;
+width: 116.01px;
+height: 33.61px;
+background: #47ABD9;
+border-radius: 73.5294px;
+border: none;
+
+/* text */
+font-weight: 700;
+font-size: 11.4379px;
+line-height: 13px;
+text-align: center;
+color: #FCFCFD;
+}
+
+.tpbox-btn:hover{
+    filter: brightness(90%);
+}

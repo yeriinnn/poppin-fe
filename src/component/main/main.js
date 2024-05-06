@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import SwiperCore, { Navigation, Autoplay } from "swiper"; // Pagination 제거
 import "swiper/swiper-bundle.css";
 import "./css/Main.css"; 
+import TpBox from "./TpBox";
 import popup1 from "../main/dump1.png"; 
 import popup2 from "../main/dump2.png"; 
 import popup3 from "../main/dump1.png"; 
@@ -65,6 +66,22 @@ const Main = () => {
         <div className="popup-text">
           사람들에게 인기 있는 팝업
         </div>
+       {/* TpBox 컴포넌트 사용 */}
+       <TpBox
+          imgSrc={popup1}
+          productName="눙눙일"
+          popupPeriod="2024.09.02 - 2024.09.10"
+        />
+        <TpBox
+          imgSrc={popup2}
+          productName="눙눙이"
+          popupPeriod="2024.09.02 - 2024.09.10"
+        />
+        <TpBox
+          imgSrc={popup3}
+          productName="눙눙삼"
+          popupPeriod="2024.09.02 - 2024.09.10"
+        />
       </div>
     </div>
   );
