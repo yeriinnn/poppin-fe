@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./css/Live.css";
-import LiveBox from "./LiveBox";
+import LiveBox from "./LiveBox.js";
 import dbjson from "../popup/popupdb.json";
 
 const Live = () => {
@@ -42,19 +42,21 @@ const Live = () => {
 
             {/* Live-list */}
             <div className="live-list">
-                <div className="list-container">
-                    {live.map((popup) => (
-                        <LiveBox
-                            id={popup.id}
-                            name={popup.name}
-                            start_date={popup.start_date}
-                            end_date={popup.start_date}
-                            city = {popup.city}
-                            local = {popup.local}
-                            location = {popup.location}
-                            image={popup.image}
-                        />
-                    ))}
+                <div className="list-space">
+                    <div className="list-container">
+                        {live.map((popup) => (
+                            <LiveBox
+                                id={popup.id}
+                                name={popup.name}
+                                start_date={popup.start_date}
+                                end_date={popup.start_date}
+                                city={popup.city}
+                                local={popup.local}
+                                location={popup.location}
+                                image={popup.image}
+                            />
+                        ))}
+                    </div>
                 </div>
                 {/* Load more 100+ 버튼 */}
                 <div className="list-bottom">
