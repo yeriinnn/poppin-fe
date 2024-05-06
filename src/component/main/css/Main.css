@@ -1,0 +1,15 @@
+ /* 이미지 슬라이더 영역 */
+  .image-slider {
+    width: 1482px;
+    height: 594px;
+    flex-shrink: 0;
+    margin-top: 61px;
+  }
+  
+  /* 진행중인 팝업 영역 */
+  .popup-section {
+    margin-top: 101px;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
