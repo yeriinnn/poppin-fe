@@ -59,23 +59,25 @@ const Main = () => {
       </div>
 
       {/* 진행중인 팝업 영역 */}
-      <div className="popup-section">
         <div className="popup-text">
           <strong>진행중인 팝업 TOP3</strong>
         </div>
         <div className="popup-text">
           사람들에게 인기 있는 팝업
         </div>
+        <div className="popup-section" style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center' }}>
        {/* TpBox 컴포넌트 사용 */}
        <TpBox
           imgSrc={popup1}
           productName="눙눙일"
           popupPeriod="2024.09.02 - 2024.09.10"
+          style={{ marginRight: '32px' }}
         />
         <TpBox
           imgSrc={popup2}
           productName="눙눙이"
           popupPeriod="2024.09.02 - 2024.09.10"
+          style={{ marginRight: '32px' }}
         />
         <TpBox
           imgSrc={popup3}
