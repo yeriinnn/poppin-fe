@@ -19,7 +19,7 @@ const Main = () => {
 
   return (
     <div>
-      <Header /> {/* 헤더 컴포넌트 추가 */}
+      <Header /> 
       
       <div className="image-slider">
         {/* Swiper 컨테이너 */}

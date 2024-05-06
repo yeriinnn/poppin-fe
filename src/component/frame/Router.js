@@ -7,8 +7,6 @@ import PopupDetail from "../popup/PopupDetail";
 import Signup from "../myPage/Signup";
 import Map from "../map/Map"
 import KakaoMap from "../map/KakaoMap";
-import Map from "../map/Map"
-import KakaoMap from "../map/KakaoMap";
 import Live from "../live/Live";
 
 const AppRouter = () =>{
