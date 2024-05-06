@@ -10,6 +10,7 @@
 /* 이미지 슬라이더 영역 */
 .image-slider {
   margin-top: 10px; /* 위쪽 여백 설정 */
+  margin-bottom: 20px;
   width: 100%;
   height: 594px; /* 이미지 슬라이더 영역의 높이 */
   display: flex;
@@ -27,8 +28,6 @@
 
 /* 진행중인 팝업 영역 */
 .popup-section {
-  text-align: center; /* 텍스트를 가운데 정렬 */
-  margin-top: 20px; /* 위쪽 여백 설정 */
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -37,6 +36,8 @@
 
 /* 각 텍스트 요소의 스타일 */
 .popup-text {
+  text-align: center; /* 텍스트를 가운데 정렬 */
+  margin-bottom: 5px;
   font-size: 24px;
   font-family: Pretendard;
   line-height: 1.1; /* 줄 간격 설정 */
