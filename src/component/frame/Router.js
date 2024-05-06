@@ -8,6 +8,7 @@ import Signup from "../myPage/Signup";
 import Map from "../map/Map"
 import KakaoMap from "../map/KakaoMap";
 import Live from "../live/Live";
+import Chat from "../live/Chat";;
 import Main from "../main/Main";
 import Login from "../myPage/Login";
 
@@ -22,6 +23,7 @@ const AppRouter = () =>{
             <Route path="Main" element={<Main/>} />
             <Route path="KaKaoMap" element={<KakaoMap/>} />
             <Route path="Live" element={<Live/>} />
+            <Route path="Chat" element = {<Chat/>} />
             <Route path="Login" element={<Login/>} />
         </Routes>
       </Router>

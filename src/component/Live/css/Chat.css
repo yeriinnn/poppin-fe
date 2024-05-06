@@ -1,0 +1,59 @@
+.chat-page-background {
+    height: 80vh; 
+    width: 80vw; 
+    background-color: #E6E8EC; 
+    margin: 5% auto; 
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border-radius: 20px;
+}
+
+.chat-page-top{
+    display: flex;
+    flex-direction: row;
+    padding:20px;
+}
+
+.chat-title{
+    font-size: 30px;
+    margin-right: 12px;
+}
+
+.chat-join-info{
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    color: #363940;
+    font-weight: bold;
+}
+
+.chat-ic-person{
+    width: 18px;
+    height: 18px;
+}
+
+.chat-person{
+    font-size: 16px;
+    color: #95A1BB;
+}
+
+.chat-white-background {
+    height: 80vh; 
+    width: 80vw; 
+    position: relative;
+    background-color: white; 
+     display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.user-chat-list{
+    width: 30%;
+    height: 80%;
+    padding: 20px;
+}
+
+.user-chat-container {
+    position: relative;
+}
