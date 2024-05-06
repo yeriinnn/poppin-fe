@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import './Main.css';
+import './css/Main.css';
 import Header from './Header'; // 헤더 컴포넌트 import
 import Swiper from 'swiper'; // Swiper 라이브러리 import
 import 'swiper/css/swiper.min.css'; // Swiper CSS 파일 import
