@@ -6,7 +6,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination"; 
 import "./css/Main.css"; 
 import popup1 from "../main/dump1.png"; 
-import popup2 from "../main/dump1.png"; 
+import popup2 from "../main/dump2.png"; 
 import popup3 from "../main/dump1.png"; 
 
 
