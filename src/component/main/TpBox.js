@@ -8,7 +8,7 @@ const TpBox = ({ imgSrc, productName, popupPeriod }) => {
       <div className="tpbox-inner">
         <div className="tpbox-name">{productName}</div>
         <div className="tpbox-date">{popupPeriod}</div>
-        <button className="tpbox-btn">바로가기</button>
+        <button className="tpbox-btn">상세보기</button>
       </div>
     </div>
   );
