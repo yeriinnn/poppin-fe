@@ -9,6 +9,7 @@ import Map from "../map/Map"
 import KakaoMap from "../map/KakaoMap";
 import Live from "../live/Live";
 import Main from "../main/main";
+import Login from "../myPage/Login";
 
 const AppRouter = () =>{
     return(
@@ -21,6 +22,7 @@ const AppRouter = () =>{
             <Route path="Main" element={<Main/>} />
             <Route path="KaKaoMap" element={<KakaoMap/>} />
             <Route path="Live" element={<Live/>} />
+            <Route path="Login" element={<Login/>} />
         </Routes>
       </Router>
     );
