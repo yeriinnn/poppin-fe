@@ -65,7 +65,7 @@ const Main = () => {
         <div className="popup-text">
           사람들에게 인기 있는 팝업
         </div>
-        <div className="popup-section" style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center' }}>
+        <div className="popup-section" style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', marignTop: '30px' }}>
        {/* TpBox 컴포넌트 사용 */}
        <TpBox
           imgSrc={popup1}
