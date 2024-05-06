@@ -4,9 +4,18 @@ import { Link } from 'react-router-dom';
 
 
 const Footer = () => {
+
+    const handleFooterLogoClick = () => {
+        window.location.href = '/main'; 
+      };
+
     return (
         <footer className="main-footer">
-            <img className="logo" src="/images/popin.png" alt="Logo" />
+            <img className="footer-logo" src="/images/popin.png"
+                alt="footer-Logo"
+                onClick={handleFooterLogoClick}
+                style={{ cursor: 'pointer' }}
+            />
             <div className="footer-content">
                 <div className="footer-contact" style={{ fontSize: "17px", color: "#3B5266" }}>
                     <strong>Contact us</strong>
