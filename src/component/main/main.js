@@ -9,13 +9,12 @@ import popup1 from "../main/dump1.png";
 import popup2 from "../main/dump2.png"; 
 import popup3 from "../main/dump1.png"; 
 
-
 SwiperCore.use([Navigation, Pagination, Autoplay]); 
 
 const Main = () => {
   const params = {
     spaceBetween: 10,
-    slidesPerView: "1",
+    slidesPerView: 1, 
     loop: true,
     navigation: true,
     pagination: {
@@ -46,7 +45,7 @@ const Main = () => {
 
       {/* 진행중인 팝업 영역 */}
       <div className="popup-section">
-      <div className="popup-text">
+        <div className="popup-text">
           <strong>진행중인 팝업 TOP3</strong>
         </div>
         <div className="popup-text">
