@@ -5,6 +5,10 @@ import "swiper/css";
 import "swiper/css/navigation"; 
 import "swiper/css/pagination"; 
 import "./css/Main.css"; 
+import popup1 from "../main/dump1.png"; 
+import popup2 from "../main/dump1.png"; 
+import popup3 from "../main/dump1.png"; 
+
 
 SwiperCore.use([Navigation, Pagination, Autoplay]); 
 
@@ -29,13 +33,13 @@ const Main = () => {
       <div className="image-slider">
         <Swiper {...params}>
           <SwiperSlide>
-            <img src="/src/assets/images/popup1.png" alt="Slide 1" />
+            <img src={popup1} alt="Slide 1" />
           </SwiperSlide>
           <SwiperSlide>
-            <img src="/src/assets/images/popup2.jpg" alt="Slide 2" />
+            <img src={popup2} alt="Slide 2" />
           </SwiperSlide>
           <SwiperSlide>
-            <img src="/src/assets/images/popup3.jpg" alt="Slide 3" />
+            <img src={popup3} alt="Slide 3" />
           </SwiperSlide>
         </Swiper>
       </div>
