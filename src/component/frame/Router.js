@@ -7,6 +7,9 @@ import PopupDetail from "../popup/PopupDetail";
 import Signup from "../myPage/Signup";
 import Map from "../map/Map"
 import KakaoMap from "../map/KakaoMap";
+import Map from "../map/Map"
+import KakaoMap from "../map/KakaoMap";
+import Live from "../live/Live";
 
 const AppRouter = () =>{
     return(
@@ -17,6 +20,7 @@ const AppRouter = () =>{
             <Route path="Signup" element={<Signup/>} />
             <Route path="Map" element={<Map/>} />
             <Route path="KaKaoMap" element={<KakaoMap/>} />
+            <Route path="Live" element={<Live/>} />
         </Routes>
       </Router>
     );
