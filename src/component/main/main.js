@@ -1,46 +1,60 @@
-import React from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import SwiperCore, { Navigation, Pagination, Autoplay } from "swiper";
-import "swiper/css"; 
-import "swiper/css/navigation"; 
-import "swiper/css/pagination"; 
+import React, { useEffect } from "react";
+import SwiperCore, { Navigation, Autoplay } from "swiper"; // Pagination 제거
+import "swiper/swiper-bundle.css";
 import "./css/Main.css"; 
 import popup1 from "../main/dump1.png"; 
 import popup2 from "../main/dump2.png"; 
 import popup3 from "../main/dump1.png"; 
+import popup4 from "../main/dump2.png"; 
+import popup5 from "../main/dump1.png"; 
 
-SwiperCore.use([Navigation, Pagination, Autoplay]); 
+SwiperCore.use([Navigation, Autoplay]); // Pagination 제거
 
 const Main = () => {
-  const params = {
-    spaceBetween: 10,
-    slidesPerView: 1, 
-    loop: true,
-    navigation: true,
-    pagination: {
-      clickable: true,
-    },
-    autoplay: {
-      delay: 2000,
-      disableOnInteraction: false,
-    },
-  };
+  useEffect(() => {
+    SwiperCore.use([Navigation, Autoplay]);
+
+    const swiper = new SwiperCore(".image-slider", {
+      loop: true,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      autoplay: {
+        delay: 5000, // 5초마다 자동 슬라이드
+      },
+      spaceBetween: 0,
+    });
+    return () => {
+      swiper.destroy();
+    };
+  }, []);
 
   return (
     <div className="main-container">
       {/* 이미지 슬라이더 영역 */}
-      <div className="image-slider">
-        <Swiper {...params}>
-          <SwiperSlide>
+      <div className="image-slider swiper-container" style={{ width: '100%', height: '594px', flexShrink: 0 }}>
+        <div className="swiper-wrapper">
+          <div className="image-slide">
             <img src={popup1} alt="Slide 1" />
-          </SwiperSlide>
-          <SwiperSlide>
+          </div>
+          <div className="swiper-slide">
             <img src={popup2} alt="Slide 2" />
-          </SwiperSlide>
-          <SwiperSlide>
+          </div>
+          <div className="swiper-slide">
             <img src={popup3} alt="Slide 3" />
-          </SwiperSlide>
-        </Swiper>
+          </div>
+          <div className="swiper-slide">
+            <img src={popup4} alt="Slide 4" />
+          </div>
+          <div className="swiper-slide">
+            <img src={popup5} alt="Slide 5" />
+          </div>
+          
+        </div>
+        {/* 네비게이션 버튼 추가 */}
+        <div className="swiper-button-prev"></div>
+        <div className="swiper-button-next"></div>
       </div>
 
       {/* 진행중인 팝업 영역 */}
