@@ -19,9 +19,12 @@ const LiveBox = (props) => {
                     <div className="box-address">{props.city} {props.local} {props.location}</div>
                 </div>
                 <div className="box-join-info">
-                    <div className="box-liked">100명이 와글와글</div>
-                    <div className="box-point">100포인트</div>
-                    <button className="join-button">join</button>
+                    <div className="box-liked-content">
+                    <img className="box-ic-liked" src={require('../../assets/images/ic_person.png')} />
+                        <div className="box-liked">100명이 와글와글</div>
+                    </div>
+                    <div className="box-point">Ⓒ100P</div>
+                    <button className="join-button"><strong>join</strong></button>
                 </div>
             </div>
         </div>
