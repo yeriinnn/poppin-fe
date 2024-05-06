@@ -9,7 +9,7 @@
     background: #FFFFFF;
     box-shadow: 0 0 5px rgba(177, 181, 196, 0.5);
     border-radius: 16px;
-    margin: 0px 17px 25px 0px;
+    padding: 15px;
 
     font-family: 'Pretendard-Regular';
     font-style: normal;
@@ -24,17 +24,40 @@
 
 .box-img{
 position: relative;
-width: 287.58px;
-height: 223.04px;
-border-radius: 16px 16px 0px 0px;
+width: 358px;
+height: 265px;
+border-radius: 25px;
+margin-top: 10px;
+margin-bottom: 10px;
+margin-right: 40px;
 }
 
 .box-content{
     display: flex;
     flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 60px;
+    flex: 1;
+    padding-top: 40px;
+    padding-bottom: 10px;
+}
+
+.box-name{
+    font-size: 24px;
+    margin-bottom: 24px;
+    align-items: center;
+
+}
+
+.box-date, .box-address{
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-align: center;
 }
 
 .box-join-info{
     display: flex;
     flex-direction: row;
+    align-items: center;
 }

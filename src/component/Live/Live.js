@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./css/Live.css";
-import LiveBox from "./LiveBox";
+import LiveBox from "./LiveBox.js";
 import dbjson from "../popup/popupdb.json";
 
 const Live = () => {
