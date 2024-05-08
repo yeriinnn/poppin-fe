@@ -79,6 +79,9 @@ const Main = () => {
     <WpBox imgSrc={popup3} productName="리스트" popupPeriod="2024.09.02 - 2024.09.10" style={{ marginRight: "111px" }} />
     <WpBox imgSrc={popup3} productName="5개" popupPeriod="2024.09.02 - 2024.09.10"  />
   </div>
+  <div className="main-bottom">
+        <button className="mainBtn">Load more</button>
+            </div>
   </div>
   );
 };
