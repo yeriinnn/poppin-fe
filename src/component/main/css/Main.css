@@ -1,7 +1,6 @@
 .main-container {
   display: flex;
   flex-direction: column;
-  align-items: center; 
   justify-content: center; 
   min-height: 100vh; 
   position: relative;
@@ -34,10 +33,20 @@
   align-items: center;
 }
 
-/* 각 텍스트 요소의 스타일 */
+/* TOP3 팝업 텍스트 */
 .popup-text {
   text-align: center; /* 텍스트를 가운데 정렬 */
   margin-bottom: 5px;
+  font-size: 24px;
+  font-family: Pretendard;
+  line-height: 1.1; /* 줄 간격 설정 */
+}
+
+/* 진행중인 전국 팝업 텍스트 */
+.continue-text {
+  text-align:left;
+  margin-bottom: 5px;
+  margin-left: 56px;
   font-size: 24px;
   font-family: Pretendard;
   line-height: 1.1; /* 줄 간격 설정 */

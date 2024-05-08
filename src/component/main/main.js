@@ -85,6 +85,11 @@ const Main = () => {
           popupPeriod="2024.09.02 - 2024.09.10"
         />
       </div>
+       {/* 진행중인 전국 팝업 정보 */}
+       <div className="continue-text" style={{ marginTop: '186px' }}>
+        <strong>진행중인 전국 팝업 정보</strong>
+        <div>진행중인 전국 팝업을 둘러보세요.</div>
+      </div>
     </div>
   );
 };
