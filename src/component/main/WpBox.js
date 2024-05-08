@@ -7,7 +7,7 @@ const WpBox = ({ imgSrc, productName, popupPeriod }) => {
       <img src={imgSrc} alt="Product" className="wpbox-img" />
       <div className="wpbox-inner">
         <div className="wpbox-name">{productName}</div>
-        <div className="wpbox-date">{popupPeriod}</div>
+        <div className="wpbox-date"> 팝업기간 {popupPeriod}</div>
       </div>
     </div>
   );

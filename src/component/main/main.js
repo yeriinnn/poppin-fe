@@ -73,11 +73,11 @@ const Main = () => {
       </div>
     <div className="whbox-section" style={{ display: "flex", flexDirection: "row", justifyContent: "center", marginTop: "30px" }}>
     {/* WholeBox 컴포넌트 사용 */}
-    <WpBox imgSrc={popup1} productName="눙눙일" popupPeriod="2024.09.02 - 2024.09.10" style={{ marginRight: "32px" }} />
-    <WpBox imgSrc={popup2} productName="눙눙이" popupPeriod="2024.09.02 - 2024.09.10" style={{ marginRight: "32px" }} />
-    <WpBox imgSrc={popup3} productName="눙눙삼" popupPeriod="2024.09.02 - 2024.09.10" style={{ marginRight: "32px" }} />
-    <WpBox imgSrc={popup3} productName="눙눙삼" popupPeriod="2024.09.02 - 2024.09.10" style={{ marginRight: "32px" }} />
-    <WpBox imgSrc={popup3} productName="눙눙삼" popupPeriod="2024.09.02 - 2024.09.10"  />
+    <WpBox imgSrc={popup1} productName="진행중" popupPeriod="2024.09.02 - 2024.09.10" style={{ marginRight: "111px" }} />
+    <WpBox imgSrc={popup2} productName="전국" popupPeriod="2024.09.02 - 2024.09.10" style={{ marginRight: "111px" }} />
+    <WpBox imgSrc={popup3} productName="팝업" popupPeriod="2024.09.02 - 2024.09.10" style={{ marginRight: "111px" }} />
+    <WpBox imgSrc={popup3} productName="리스트" popupPeriod="2024.09.02 - 2024.09.10" style={{ marginRight: "111px" }} />
+    <WpBox imgSrc={popup3} productName="5개" popupPeriod="2024.09.02 - 2024.09.10"  />
   </div>
   </div>
   );
