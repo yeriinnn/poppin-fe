@@ -9,7 +9,12 @@ import Signup from "../myPage/Signup";
 import Map from "../map/Map"
 import KakaoMap from "../map/KakaoMap";
 import Live from "../live/Live";
-import Chat from "../live/Chat";;
+import Chat from "../live/Chat";
+import Mypage from "../myPage/MyPage";
+import WishList from "../myPage/WishList";
+import MyChat from "../myPage/Mychat";
+import UserInfo from "../myPage/UserInfo";
+
 
 const AppRouter = () =>{
     return(
@@ -24,6 +29,10 @@ const AppRouter = () =>{
             <Route path="Live" element={<Live/>} />
             <Route path="Chat" element = {<Chat/>} />
             <Route path="Login" element={<Login/>} />
+            <Route path="Mypage" element={<Mypage/>} />
+            <Route path="UserInfo" element={<UserInfo/>} />
+            <Route path="WishList" element={<WishList/>} />
+            <Route path="MyChat" element={<MyChat/>} />
         </Routes>
       </Router>
     );
