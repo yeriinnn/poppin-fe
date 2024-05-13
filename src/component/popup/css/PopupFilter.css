@@ -8,7 +8,7 @@
 
   /* 스크롤 시 자연스럽게 따라 내려가기 */
   position: sticky;
-  top: 100px;
+  top: 200px;
 }
 
 .filter-location {
