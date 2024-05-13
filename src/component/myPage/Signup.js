@@ -60,7 +60,7 @@ export default function Signup() {
                         <button className="signupButton">회원가입</button>
                     </div>
                     <div className="loginPrompt">
-                        <div>이미 계정이 있으신가요? <a className="loginLink">로그인</a></div>
+                        <div>이미 계정이 있으신가요? <a className="loginLink" href='./Login'>로그인</a></div>
                     </div>
                 </div>
             </div>

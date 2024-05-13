@@ -1,0 +1,58 @@
+/* wpbox CSS */
+.wpbox{
+    display: flex;
+    align-items: flex-start;
+    gap: 32.68px;
+    box-sizing: border-box;
+    position: relative;
+    width: 287.58px;
+    height: 375px;
+    background: #FFFFFF;
+    margin:0px 17px 25px 0px;
+    font-family: 'Pretendard-Regular';
+    font-style: normal;
+    transition: transform 0.5s ease, box-shadow 0.4s ease;
+    }
+    
+    .wpbox:hover{
+        transform: scale(1.15);
+    }
+    
+    .wpbox-img{
+    position: relative;
+    width: 230px;
+    height: 264px;
+    }
+    
+    .wpbox-inner{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 6.54px;
+    
+    position: absolute;
+    width: 203.43px;
+    height: 93.48px;
+    left: 20.43px;
+    top: 250px;
+    }
+
+    
+    /* 팝업스토어 */
+    .wpbox-name{
+    font-weight: 700;
+    font-size: 18px;
+    margin-top: 20px;
+    line-height: 20px;
+    color: #161412;
+    }
+    
+    
+    /* 팝업 기간 23.09.02 - 24.09.02 */
+    .wpbox-date{
+    font-weight: 400;
+    font-size: 9.80392px;
+    line-height: 14px;
+    color: #65635F;
+    }
