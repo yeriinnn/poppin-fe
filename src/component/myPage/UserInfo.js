@@ -1,8 +1,32 @@
 import React, { useState, useEffect } from 'react';
+import Modal from 'react-modal'
 import './css/Userinfo.css';
 
 export default function UserInfo() {
-    const [point, setPoint] = useState(0); // 포인트 값을 상태로 관리합니다.
+    const [point, setPoint] = useState(0); // 포인트 값을 상태로 관리
+    const [isOpen, setIsOpen] = useState(false); // 비밀번호 변경 팝업 창 관리
+
+    const openModal = () => {
+        setIsOpen(true);
+    };
+
+    const closeModal = () => {
+        setIsOpen(false);
+    };
+
+    const modalStyles = {
+        overlay: {
+            backgroundColor: "rgba(0, 0, 0, 0.5)", 
+            zIndex: "9999",
+        },
+        content: { 
+            width: "35%",
+            height: "auto",
+            margin: "auto",
+            borderRadius: "4px",
+            boxShadow: "0 2px 4px rgba(0, 0, 0, 0.2)",
+        },
+    };
 
     // useEffect를 사용하여 컴포넌트가 마운트될 때 포인트 값을 받아옵니다.
     useEffect(() => {
@@ -54,10 +78,65 @@ export default function UserInfo() {
                     type={'text'}
                     placeholder="닉네임"
                 />
-                <button className="changeButton" style={{ display: 'inline-block', marginLeft: '30px' }}>닉네임 변경</button>
+                <button className="changeButton" style={{ display: 'inline-block', marginLeft: '30px'}}>닉네임 변경</button>
             </div>
             <div className="infoLabel">비밀번호</div>
-            <button className="changeButton">비밀번호 변경</button>
+            <button className="changeButton" onClick={openModal}>비밀번호 변경</button>
+
+            <Modal isOpen={isOpen} onRequestClose={closeModal} style={modalStyles}>
+                <span className='modalContent'>
+                <div className='modal-cancle'>
+                    <img
+                        src={require('../../assets/images/ic_cancle.png')}
+                        alt='cancle'
+                        onClick={closeModal} // 취소 이미지에 onClick 이벤트 추가
+                        style={{ cursor: 'pointer'}} // 커서를 포인터로 변경하여 클릭 가능하다는 시각적 피드백 제공
+                    />
+                </div>
+                <div className='logoContainer'><img className='modal-logo' 
+                        src={require('../../assets/images/bigLogo.png')} 
+                        alt='logo'/></div>
+                <div className="infoLabel">이메일</div>
+                <div className="inputWithButton-m">
+                    <input
+                        className="infoInput1"
+                        name="email"
+                        type={'text'}
+                        placeholder="이메일"
+                    />
+                    <button className="checkButton">인증코드 받기</button>
+                </div>
+                <div className="infoLabel">인증번호</div>
+                <div className="inputWithButton-m">
+                    <input
+                        className="infoInput1"
+                        name="email"
+                        type={'text'}
+                        placeholder="인증번호를 입력해주세요."
+                    />
+                    <button className="checkButton"
+                            style={{width: '26%'}}>확인</button>
+                </div>
+                <div className="infoLabel">새 비밀번호</div>
+                    <input
+                        className="infoInput2"
+                        name="pw"
+                        type={'password'}
+                        placeholder="새 비밀번호"
+                    />
+                    <div className="guideText">8자리 이상 입력해주세요.</div>
+                    <div className="infoLabel">비밀번호 확인</div>
+                    <input
+                        className="infoInput2"
+                        name="pwCheck"
+                        type={'password'}
+                        placeholder="비밀번호"
+                    />
+                <button className='checkButton' 
+                        style={{ display: 'flex', width: '100%', justifyContent: 'center', marginTop: '20px'}}
+                        onClick={closeModal}>변경하기</button>
+                </span>
+            </Modal>
         </div>
     );
 }
