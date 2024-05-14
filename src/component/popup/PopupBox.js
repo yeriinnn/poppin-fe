@@ -1,6 +1,7 @@
 import React from "react";
 import "./css/PopupBox.css";
 import { useNavigate } from "react-router-dom";
+import Heart from "../heart/Heart";
 
 const PopupBox = (popup) => {
   const navigate = useNavigate();
@@ -16,8 +17,9 @@ const PopupBox = (popup) => {
         src={require("../../assets/images/" + popup.image + ".png")}
       />
       <div className="box-heart">
-        <img src={require("../../assets/images/heart.png")} />
-        {popup.heart > 999 ? (<span>999+</span>) : (<span>{popup.heart}</span>)}
+        <Heart
+          heart={popup.heart}
+        />
       </div>
       <div className="box-inner">
         <div className="box-name">{popup.name}</div>
