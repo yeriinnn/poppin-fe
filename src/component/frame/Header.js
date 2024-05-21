@@ -9,7 +9,7 @@ const Header = () => {
   };
 
   // 이메일이 있을 때와 없을 때(공백)
-  const loginState = useSelector(state => state.loginSlice)
+  // const loginState = useSelector(state => state.loginSlice)
 
   console.log("loginState : ", loginState)
 
