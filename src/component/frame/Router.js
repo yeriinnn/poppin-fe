@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 import Login from "../myPage/Login";
-import Main from "../main/Main";
+import Main from "../main/Main.js";
 import PopupList from "../popup/PopupList";
 import PopupDetail from "../popup/PopupDetail";
 import Signup from "../myPage/Signup";
