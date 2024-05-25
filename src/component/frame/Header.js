@@ -2,11 +2,17 @@ import React from 'react';
 import './css/Header.css';
 import {useSelector} from "react-redux"
 import LogoutComponent from '../myPage/module/LogoutComponenet';
+import useCustomLogin from '../myPage/module/useCustomLogin';
 
 const Header = () => {
+  const {moveToLogin} = useCustomLogin()
   const handleLogoClick = () => {
     window.location.href = '/main'; 
   };
+
+  const handleClickLogin = (e) => {
+    moveToLogin()
+  }
 
   //이메일이 있을 때와 없을 때(공백)
   const loginState = useSelector(state => state.loginSlice)
@@ -31,7 +37,7 @@ const Header = () => {
         {loginState.email ?
         <><LogoutComponent></LogoutComponent></> :
         <div className="header-buttons">
-          <button className="header-button special-button"><strong>Sign In</strong></button>
+          <button className="header-button special-button" onClick={handleClickLogin}><strong>Sign In</strong></button>
           <button className="header-button special-button"><strong>Join</strong></button>
         </div>
         }

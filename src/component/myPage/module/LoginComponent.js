@@ -4,7 +4,7 @@ import useCustomLogin from "./useCustomLogin";
 // 초기 설정
 const initState = {
     email: '',
-    pw: ''
+    password: ''
 }
 
 function LoginComponent(props) {
@@ -24,6 +24,8 @@ function LoginComponent(props) {
     const handleClickLogin = (e) => {
         // Redux의 login 액션을 dispatch하여 로그인 요청
         // dispatch(login(loginParam))
+        console.log('Login attempt with:', loginParam);
+
 
         doLogin(loginParam).then(data => {
             if(data.error) {
@@ -51,9 +53,9 @@ function LoginComponent(props) {
             <div className="loginLabel">비밀번호</div>
             <input
                 className="loginInput"
-                name="pw"
+                name="password"
                 type={'password'}
-                value={loginParam.pw}
+                value={loginParam.password}
                 onChange={handleChange}
                 placeholder="비밀번호"
             />
