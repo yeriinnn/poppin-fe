@@ -1,18 +1,16 @@
 import React, {useState} from "react";
-import {useDispatch} from "react-redux";
-import {login} from "../slices/loginSlice";
+import useCustomLogin from "./useCustomLogin";
 
 // 초기 설정
 const initState = {
     email: '',
-    pw: ''
+    password: ''
 }
 
 function LoginComponent(props) {
     // 로그인 상태를 관리하는 state
     const [loginParam, setLoginParam] = useState({...initState})
-
-    const dispatch = useDispatch()
+    const {doLogin, moveToPath} = useCustomLogin()
 
     // 입력값이 변경될 때 호출되는 함수
     const handleChange = (e) => {
@@ -25,7 +23,17 @@ function LoginComponent(props) {
     // 로그인 버튼 클릭 시 호출되는 함수
     const handleClickLogin = (e) => {
         // Redux의 login 액션을 dispatch하여 로그인 요청
-        dispatch(login(loginParam))
+        // dispatch(login(loginParam))
+        console.log('Login attempt with:', loginParam);
+
+
+        doLogin(loginParam).then(data => {
+            if(data.error) {
+                alert("이메일과 패스워드를 확인해 주세요")
+            }else {
+                moveToPath("/Main")
+            }
+        })
     }
 
 
@@ -45,9 +53,9 @@ function LoginComponent(props) {
             <div className="loginLabel">비밀번호</div>
             <input
                 className="loginInput"
-                name="pw"
+                name="password"
                 type={'password'}
-                value={loginParam.pw}
+                value={loginParam.password}
                 onChange={handleChange}
                 placeholder="비밀번호"
             />
