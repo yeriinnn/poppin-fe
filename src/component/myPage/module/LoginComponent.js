@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import {useDispatch} from "react-redux";
-import {login} from "../slices/loginSlice";
+import {login, loginPostAsync} from "../slices/loginSlice";
+import { useNavigate } from "react-router-dom";
 
 // 초기 설정
 const initState = {
@@ -14,6 +15,8 @@ function LoginComponent(props) {
 
     const dispatch = useDispatch()
 
+    const navigate = useNavigate()
+
     // 입력값이 변경될 때 호출되는 함수
     const handleChange = (e) => {
         // 입력값을 loginParam 상태에 업데이트
@@ -25,7 +28,17 @@ function LoginComponent(props) {
     // 로그인 버튼 클릭 시 호출되는 함수
     const handleClickLogin = (e) => {
         // Redux의 login 액션을 dispatch하여 로그인 요청
-        dispatch(login(loginParam))
+        // dispatch(login(loginParam))
+
+        dispatch(loginPostAsync(loginParam))
+            .unwrap()
+            .then(data => {
+                if(data.error) {
+                    alert("이메일과 패스워드를 확인해 주세요")
+                }else {
+                    navigate({pathname: '/Main'}, {replace: true})
+                }
+            })
     }
 
 
