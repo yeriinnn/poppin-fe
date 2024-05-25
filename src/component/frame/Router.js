@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
-import Login from "../myPage/Login";
+import Login from "../myPage/Login.js"
 import Main from "../main/Main.js";
 import PopupList from "../popup/PopupList";
 import PopupDetail from "../popup/PopupDetail";
@@ -14,11 +14,14 @@ import Mypage from "../myPage/MyPage";
 import WishList from "../myPage/WishList";
 import MyChat from "../myPage/Mychat";
 import UserInfo from "../myPage/UserInfo";
+import Header from "./Header.js";
+import Footer from "./Footer.js";
 
 
 const AppRouter = () =>{
     return(
       <Router>
+        <Header/>
         <Routes>
             <Route path="popup" element={<PopupList />} />
             <Route path="popupdetail/:popupId" element={<PopupDetail />} />
@@ -34,6 +37,7 @@ const AppRouter = () =>{
             <Route path="WishList" element={<WishList/>} />
             <Route path="MyChat" element={<MyChat/>} />
         </Routes>
+        <Footer/>
       </Router>
     );
 }
