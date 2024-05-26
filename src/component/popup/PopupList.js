@@ -25,14 +25,14 @@ const PopupList = () => {
       <div className="popupList">
         <div className="list-top">
           <span>
-            <img src={require("../../assets/images/search.png")} />
+            <img src={require("../../assets/images/search.png")} alt="search" />
           </span>
           <input
             className="list-search"
             placeholder="search for anything"
           ></input>
           <button className="searchBtn" type="button">
-            <img src={require("../../assets/images/searchBtn.png")} />
+            <img src={require("../../assets/images/searchBtn.png")} alt="searchBtn" />
           </button>
         </div>
         <div className="list-container-wrapper">

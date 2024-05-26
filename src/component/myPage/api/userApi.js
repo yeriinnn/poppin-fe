@@ -1,17 +1,33 @@
-// // post 방식으로 Login
 // import axios from "axios"
-// import {API_SERVER_HOST} from 
 
-// const host = `${API_SERVER_HOST}/api/user`
+// const API_SERVER_HOST = 'http://localhost:8080'
 
 // export const loginPost = async (loginParam) => {
 //     const header = {headers: {"Content-Type": "x-www-form-urlencoded"}}
 
 //     const form = new FormData()
 //     form.append('username', loginParam.email)
-//     form.append('password', loginParam.pw)
+//     form.append('password', loginParam.password)
 
-//     const res = await axios.post(`${host}/login`, form, header)
+//     const res = await axios.post(`${API_SERVER_HOST}/user/login`, form, header)
 
 //     return res.data
 // }
+
+import axios from "axios";
+
+const API_SERVER_HOST = 'http://localhost:8080';
+
+export const loginPost = async (loginParam) => {
+    const header = {headers: {"Content-Type": "application/x-www-form-urlencoded"}};
+
+    const form = new URLSearchParams();
+    form.append('username', loginParam.email);
+    form.append('password', loginParam.password);
+
+    const res = await axios.post(`${API_SERVER_HOST}/user/login`, form, header);
+
+    return res.data;
+}
+
+
