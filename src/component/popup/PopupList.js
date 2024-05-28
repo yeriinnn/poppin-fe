@@ -12,6 +12,11 @@ const PopupList = () => {
     setPopup(dbjson.popup);
   };
 
+  //필터링 값 변경시 마다 호출되는 콜 백 함수
+  const handleFilterChange = (newFilterValues) => {
+    console.log("newFilterValues", newFilterValues);
+  };
+
   useEffect(() => {
     setPopup(dbjson);
   }, []); //종속성 배열
@@ -52,7 +57,7 @@ const PopupList = () => {
             </div>
           </div>
           <div className="list-right right">
-            <PopupFilter />
+            <PopupFilter onFilterChange={handleFilterChange}/>
           </div>
         </div>
       </div>

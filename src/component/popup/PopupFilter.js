@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./css/PopupFilter.css";
 
-const PopupFilter = () => {
+const PopupFilter = ({onFilterChange}) => {
   //-----------------checkBox(카테고리) 처리---------------------
   const category = {
     fashion: "패션",
@@ -128,6 +128,11 @@ const PopupFilter = () => {
       });
     });
   }, [hiddenState]);
+
+  //필터 변경 시 부모 컴포넌트로 전달
+  useEffect(()=>{
+    onFilterChange({ checkboxStates, selectedRadio });
+  },[checkboxStates, selectedRadio])
 
   //-----------------렌더링------------------
   return (
