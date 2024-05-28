@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-      - name: checkout Github Action
+      - name: Checkout Github Action
         uses: actions/checkout@v3
       
       - name: Get npm cache directory
@@ -26,10 +26,10 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-node-
       
-      - name: install npm dependencies
+      - name: Install npm dependencies
         run: npm install
         
-      - name: react build
+      - name: React build
         run: npm run build
         env:
             CI: ""
@@ -41,20 +41,17 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_S3_SECRET_ACCESS_KEY_ID }}
           aws-region: ap-northeast-2
       
-      - name: Print environment variables for debugging
+      - name: Check if environment variables are set
         run: |
-          echo "BUCKET_NAME=${{ secrets.AWS_S3_BUCKET_NAME }}"
-          echo "ADDITIONAL_BUCKET_NAME=${{ secrets.AWS_S3_BUCKET_NAME2 }}"
-      
+          if [ -z "${{ secrets.AWS_S3_BUCKET_NAME }}" ]; then echo "AWS_S3_BUCKET_NAME is not set"; exit 1; fi
+          if [ -z "${{ secrets.AWS_S3_BUCKET_NAME2 }}" ]; then echo "AWS_S3_BUCKET_NAME2 is not set"; exit 1; fi
+
       - name: Upload to S3
         env:
           BUCKET_NAME: ${{ secrets.AWS_S3_BUCKET_NAME }}
         run: |
           aws s3 sync ./build s3://$BUCKET_NAME
-
-
-      # 추가 버킷에 build 파일을 올립니다.
-
+      
       - name: Upload to additional S3
         env:
           ADDITIONAL_BUCKET_NAME: ${{ secrets.AWS_S3_BUCKET_NAME2 }}
