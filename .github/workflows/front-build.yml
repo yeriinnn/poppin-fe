@@ -41,11 +41,6 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_S3_SECRET_ACCESS_KEY_ID }}
           aws-region: ap-northeast-2
       
-      - name: Check if environment variables are set
-        run: |
-          if [ -z "${{ secrets.AWS_S3_BUCKET_NAME }}" ]; then echo "AWS_S3_BUCKET_NAME is not set"; exit 1; fi
-          if [ -z "${{ secrets.AWS_S3_BUCKET_NAME2 }}" ]; then echo "AWS_S3_BUCKET_NAME2 is not set"; exit 1; fi
-
       - name: Upload to S3
         env:
           BUCKET_NAME: ${{ secrets.AWS_S3_BUCKET_NAME }}
