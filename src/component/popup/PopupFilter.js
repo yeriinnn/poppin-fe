@@ -63,7 +63,8 @@ const PopupFilter = ({onFilterChange}) => {
   const period = [
     { id: 0, name: "all", label: "모든 팝업" },
     { id: 1, name: "open", label: "현재 진행 중인 팝업" },
-    { id: 2, name: "close", label: "종료된 팝업" },
+    { id: 2, name: "will", label: "오픈 전 팝업" },
+    { id: 3, name: "close", label: "종료된 팝업" },
   ];
 
   const [selectedRadio, setSelectedRadio] = useState("open");
