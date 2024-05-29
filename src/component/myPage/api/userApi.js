@@ -25,7 +25,7 @@ export const loginPost = async (loginParam) => {
     form.append('username', loginParam.email);
     form.append('password', loginParam.password);
 
-    const res = await axios.post(`${API_SERVER_HOST}/v1/user/login`, form, header);
+    const res = await axios.post(`${API_SERVER_HOST}/user/login`, form, header);
 
     return res.data;
 }
