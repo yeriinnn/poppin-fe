@@ -1,13 +1,13 @@
 import React from 'react';
-import './css/TpBox.css'
+import './css/TpBox.css';
 
-const TpBox = ({ imgSrc, productName, popupPeriod }) => {
+const TpBox = ({ imgSrc, productName, popupPeriod, likeCount }) => {
   return (
     <div className="tpbox">
       <img src={imgSrc} alt="Product" className="tpbox-img" />
       <div className="tpbox-heart">
-        <img src={require("../../assets/images/mainboxheart.png")} />
-        <span>999+</span>
+        <img src={require("../../assets/images/mainboxheart.png")} alt="Heart" />
+        <span>{likeCount}</span>
       </div>
       <div className="tpbox-inner">
         <div className="tpbox-name">{productName}</div>
