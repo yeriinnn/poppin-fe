@@ -1,6 +1,6 @@
 import axios from "axios"
 
-
+const rest_api_key = ''
 const redirect_uri = 'http://localhost:3000/KakaoRedirect'
 const auth_code_path = 'https://kauth.kakao.com/oauth/authorize'
 const access_token_url = 'https://kauth.kakao.com/oauth/token'
