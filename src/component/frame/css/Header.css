@@ -1,9 +1,7 @@
 .main-header {
   display: flex;
-  width: 100%;
-  padding: 20px 57px 20px 124px;
+  padding: 10px 10px 10px 50px;
   align-items: center;
-  justify-content: space-between;
   border-bottom: 1px solid #E6E8EC;
   position: sticky;
   top: 0;
@@ -14,12 +12,14 @@
 .header-content {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 
 .header-buttons {
   display: flex;
+  gap: 20px;
 }
+
 
 /* 기본 버튼 스타일 */
 .header-button, .special-button {
@@ -40,7 +40,6 @@
   font-style: normal;
   font-weight: 200;
   line-height: 16px;
-  margin-right: 32px; 
 }
 
 .special-button {
@@ -56,9 +55,14 @@
 }
 
 /* 텍스트 버튼 클릭 또는 포커스 시 글씨색 변경 */
-.header-button:active,
+.header-button:hover,
 .header-button:focus,
-.special-button:active,
+.special-button:hover,
 .special-button:focus {
+  background-color: white;
   color: #47ABD9;
+}
+
+a{
+  text-decoration: none;
 }

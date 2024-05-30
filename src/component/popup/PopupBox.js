@@ -14,7 +14,8 @@ const PopupBox = (popup) => {
     <div className="pbox">
       <img
         className="box-img"
-        src={require("../../assets/images/" + popup.image + ".png")}
+        src={popup.image}
+        alt={`${popup.image}`}
       />
       <div className="box-heart">
         <Heart
@@ -24,7 +25,7 @@ const PopupBox = (popup) => {
       <div className="box-inner">
         <div className="box-name">{popup.name}</div>
         <div className="box-date">
-          팝업 기간 {popup.start_date}-{popup.end_date}
+          팝업 기간 {popup.period}
         </div>
         <button className="box-btn" onClick={() => clickPopupButton(popup)}>
           상세보기
