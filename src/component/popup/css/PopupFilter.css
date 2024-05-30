@@ -5,10 +5,6 @@
   padding: 5%;
   box-shadow: 0 0 3px rgba(177, 181, 196, 0.5);
   border-radius: 16px;
-
-  /* 스크롤 시 자연스럽게 따라 내려가기 */
-  position: sticky;
-  top: 200px;
 }
 
 .filter-location {

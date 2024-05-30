@@ -1,7 +1,7 @@
 [
   {
-    "id": "1",
-    "name": "<서울일러스트 코리아> 눈사람 눙눙이 팝업스토어",
+    "popupId": "1",
+    "popupName": "<서울일러스트 코리아> 눈사람 눙눙이 팝업스토어",
     "start_date": "24.05.09",
     "end_date": "23.05.12",
     "created_date": "23.08.02",
@@ -22,8 +22,8 @@
     "heart" : 100
   },
   {
-    "id": "2",
-    "name": "해리포터 팝업스토어",
+    "popupId": "2",
+    "popupName": "해리포터 팝업스토어",
     "start_date": "23.10.15",
     "end_date": "23.12.03",
     "created_date": "23.9.01",
@@ -44,8 +44,8 @@
     "heart" : 10000
   },
   {
-    "id": "3",
-    "name": "눈사람 눙눙이 팝업스토어",
+    "popupId": "3",
+    "popupName": "눈사람 눙눙이 팝업스토어",
     "start_date": "24.05.09",
     "end_date": "23.05.12",
     "created_date": "23.08.02",
@@ -66,8 +66,8 @@
     "heart" : 1234
   },
   {
-    "id": "4",
-    "name": "해르미온느 팝업스토어",
+    "popupId": "4",
+    "popupName": "해르미온느 팝업스토어",
     "start_date": "23.10.15",
     "end_date": "23.12.03",
     "created_date": "23.9.01",
@@ -88,8 +88,8 @@
     "heart" : 112
   },
   {
-    "id": "5",
-    "name": "눈사람 옥옥이 팝업스토어",
+    "popupId": "5",
+    "popupName": "눈사람 옥옥이 팝업스토어",
     "start_date": "24.05.09",
     "end_date": "23.05.12",
     "created_date": "23.08.02",
@@ -110,8 +110,8 @@
     "heart" : 0
   },
   {
-    "id": "6",
-    "name": "해포리터 팝업스토어",
+    "popupId": "6",
+    "popupName": "해포리터 팝업스토어",
     "start_date": "23.10.15",
     "end_date": "23.12.03",
     "created_date": "23.9.01",
@@ -132,8 +132,8 @@
     "heart" : 100
   },
   {
-    "id": "7",
-    "name": "입사람 눙눙이 팝업스토어",
+    "popupId": "7",
+    "popupName": "입사람 눙눙이 팝업스토어",
     "start_date": "24.05.09",
     "end_date": "23.05.12",
     "created_date": "23.08.02",
@@ -154,8 +154,8 @@
     "heart" : 10000
   },
   {
-    "id": "8",
-    "name": "해리포터 팝업스토어",
+    "popupId": "8",
+    "popupName": "해리포터 팝업스토어",
     "start_date": "23.10.15",
     "end_date": "23.12.03",
     "created_date": "23.9.01",
@@ -176,8 +176,8 @@
     "heart" : 100
   },
   {
-    "id": "9",
-    "name": "코사람 옥옥이 팝업스토어",
+    "popupId": "9",
+    "popupName": "코사람 옥옥이 팝업스토어",
     "start_date": "24.05.09",
     "end_date": "23.05.12",
     "created_date": "23.08.02",
@@ -198,8 +198,8 @@
     "heart" : 100
   },
   {
-    "id": "10",
-    "name": "해리포터 팝업스토어",
+    "popupId": "10",
+    "popupName": "해리포터 팝업스토어",
     "start_date": "23.10.15",
     "end_date": "23.12.03",
     "created_date": "23.9.01",
@@ -220,8 +220,8 @@
     "heart" : 100
   },
   {
-    "id": "11",
-    "name": "<서울일러스트 코리아> 눈사람 눙눙이 팝업스토어",
+    "popupId": "11",
+    "popupName": "<서울일러스트 코리아> 눈사람 눙눙이 팝업스토어",
     "start_date": "24.05.09",
     "end_date": "23.05.12",
     "created_date": "23.08.02",
@@ -242,8 +242,8 @@
     "heart" : 100
   },
   {
-    "id": "12",
-    "name": "해리포터 팝업스토어",
+    "popupId": "12",
+    "popupName": "해리포터 팝업스토어",
     "start_date": "23.10.15",
     "end_date": "23.12.03",
     "created_date": "23.9.01",
