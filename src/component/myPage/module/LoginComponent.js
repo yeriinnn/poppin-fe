@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import useCustomLogin from "./useCustomLogin";
+import KakaoLoginComponent from "./KakaoLoginComponent";
 
 // 초기 설정
 const initState = {
@@ -64,7 +65,10 @@ function LoginComponent(props) {
                 <button className="loginButton"
                         onClick={handleClickLogin}>로그인</button>
             </div>
-            <div className='signupPrompt'>다른 계정을 이용하시려면</div>
+            <div className='signupPromptSmall'>다른 계정을 이용하시려면</div>
+            <div className="kakaoContainer">
+                <KakaoLoginComponent/>
+            </div>
             <div className="signupPrompt">
                 <div>아직 계정이 없으신가요? <a className="signupLink" href='../Signup'>회원가입</a></div>
             </div> 

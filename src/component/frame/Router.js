@@ -16,6 +16,8 @@ import MyChat from "../myPage/Mychat";
 import UserInfo from "../myPage/UserInfo";
 import Header from "./Header.js";
 import Footer from "./Footer.js";
+import KakaoRedirect from "../myPage/KakaoRedirect.js"
+
 
 const AppRouter = () => {
     return (
@@ -35,6 +37,7 @@ const AppRouter = () => {
                 <Route path="/UserInfo" element={<UserInfo />} />
                 <Route path="/WishList" element={<WishList />} />
                 <Route path="/MyChat" element={<MyChat />} />
+                <Route path="KakaoRedirect" element={<KakaoRedirect/>} />
             </Routes>
             <Footer />
         </Router>
