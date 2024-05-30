@@ -11,6 +11,7 @@ SwiperCore.use([Autoplay]);
 const Main = () => {
   const [images, setImages] = useState([]);
   const [top3Popups, setTop3Popups] = useState([]);
+  const [inProgressPopups, setInProgressPopups] = useState([]); // 진행중인 팝업 데이터 저장용 상태
 
   useEffect(() => {
     const fetchImages = async () => {
@@ -20,10 +21,10 @@ const Main = () => {
         if (response.data && response.data.data && Array.isArray(response.data.data.popupImgUrls)) {
           setImages(response.data.data.popupImgUrls);
         } else {
-          console.error('Invalid data format:', response.data);
+          console.error('잘못된 데이터 형식', response.data);
         }
       } catch (error) {
-        console.error("Error fetching images:", error);
+        console.error("응답 가져오기 실패", error);
       }
     };
 
@@ -38,14 +39,32 @@ const Main = () => {
         if (response.data && Array.isArray(response.data.data)) {
           setTop3Popups(response.data.data);
         } else {
-          console.error('Invalid data format:', response.data);
+          console.error('잘못된 데이터 형식', response.data);
         }
       } catch (error) {
-        console.error("Error fetching top 3 popups:", error);
+        console.error("응답 가져오기 실패", error);
       }
     };
 
     fetchTop3Popups();
+  }, []);
+
+  useEffect(() => {
+    const fetchInProgressPopups = async () => {
+      try {
+        const response = await axios.get("http://localhost:8080/v1/popup/in-progress");
+        console.log("In-Progress Popups API response:", response.data);
+        if (response.data && Array.isArray(response.data.data)) {
+          setInProgressPopups(response.data.data);
+        } else {
+          console.error('잘못된 데이터 형식', response.data);
+        }
+      } catch (error) {
+        console.error("응답 가져오기 실패", error);
+      }
+    };
+
+    fetchInProgressPopups();
   }, []);
 
   useEffect(() => {
@@ -106,12 +125,12 @@ const Main = () => {
         <div>진행중인 전국 팝업을 둘러보세요.</div>
       </div>
       <div className="whbox-section" style={{ display: "flex", flexDirection: "row", justifyContent: "center", marginTop: "30px" }}>
-        {images.slice(0, 5).map((image, index) => (
+        {inProgressPopups.slice(0, 5).map((popup, index) => (
           <WpBox
             key={index}
-            imgSrc={image}
-            productName={`팝업 ${index + 1}`}
-            popupPeriod="2024.09.02 - 2024.09.10"
+            imgSrc={popup.popupImageUrl}
+            productName={popup.popupName}
+            popupPeriod={popup.popupPeriod}
             style={{ marginRight: index < 4 ? "111px" : "0" }}
           />
         ))}
