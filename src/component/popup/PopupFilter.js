@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./css/PopupFilter.css";
 
 const PopupFilter = ({onFilterChange}) => {
-  //-----------------checkBox(카테고리) 처리---------------------
+  //<-------------------------------checkBox(카테고리) 처리------------------------------>
   const category = {
     fashion: "패션",
     beauty: "뷰티",
@@ -15,15 +15,24 @@ const PopupFilter = ({onFilterChange}) => {
   };
 
   //여러 개의 체크 박스 상태 저장 useState hook 사용
-  const [checkboxStates, setCheckBoxStates] = useState({
-    fashion: true,
-    beauty: true,
-    food: true,
-    celeb: true,
-    digital: true,
-    character: true,
-    living: true,
-    game: true,
+  const [checkboxStates, setCheckBoxStates] = useState(()=> {
+    const savedCategory = sessionStorage.getItem("category");
+    if (savedCategory) {
+      return JSON.parse(savedCategory);
+    } else {
+      // 저장된 값이 없으면 기본 상태를 반환합니다.
+      return {
+        fashion: true,
+        beauty: true,
+        food: true,
+        celeb: true,
+        digital: true,
+        character: true,
+        living: true,
+        game: true,
+      };
+    }
+
   });
 
   //체크 박스 변경 이벤트 핸들러
@@ -58,7 +67,7 @@ const PopupFilter = ({onFilterChange}) => {
     ));
   };
 
-  //--------------------라디오 버튼(기간) 처리 -------------------
+  //<--------------------------------------------라디오 버튼(기간) 처리 ------------------------------------------->
   //선택된 라디오 버튼 상태
   const period = [
     { id: 0, name: "all", label: "모든 팝업" },
@@ -67,7 +76,15 @@ const PopupFilter = ({onFilterChange}) => {
     { id: 3, name: "close", label: "종료된 팝업" },
   ];
 
-  const [selectedRadio, setSelectedRadio] = useState("open");
+  const [selectedRadio, setSelectedRadio] = useState(() => {
+    const savedPeriod = sessionStorage.getItem("period");
+    if (savedPeriod) {
+      return savedPeriod;
+    } else {
+      // 저장된 값이 없으면 기본값을 반환합니다.
+      return "open";
+    }
+  });
   const handleRadioChange = (event) => {
     setSelectedRadio(event.target.id);
     console.log(event.target.id, ": ", event.target.value);
@@ -92,7 +109,7 @@ const PopupFilter = ({onFilterChange}) => {
     ));
   };
 
-  //--------------------토글 숨기기 처리-----------------------
+  //<--------------------------------------토글 숨기기 처리------------------------------------------>
   const [hiddenState, setHiddenStates] = useState({
     checkBox: false,
     radio: false,
@@ -132,10 +149,14 @@ const PopupFilter = ({onFilterChange}) => {
 
   //필터 변경 시 부모 컴포넌트로 전달
   useEffect(()=>{
+    // 필터링 값이 변경될 때마다 세션 스토리지에 저장합니다.
+    sessionStorage.setItem("category", JSON.stringify(checkboxStates));
+    sessionStorage.setItem("period", selectedRadio);
+
     onFilterChange({ checkboxStates, selectedRadio });
   },[checkboxStates, selectedRadio])
 
-  //-----------------렌더링------------------
+  //<-----------------------[렌더링]------------------------>
   return (
     <div className="filter-container">
       <div className="filter-location">

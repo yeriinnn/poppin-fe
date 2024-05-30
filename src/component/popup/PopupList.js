@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import "./css/PopupList.css";
 import PopupBox from "./PopupBox";
 import PopupFilter from "./PopupFilter";
-import dbjson from "./popupdb.json"; //임시 데이터
 import axios from "axios";
 
 const PopupList = () => {
@@ -13,7 +12,7 @@ const PopupList = () => {
     period: "",
   });
 
-
+  //<----------------------------[함수]------------------------------>
   //팝업 가져오는 함수
   const getPopupAPI = async () => {
     try {
@@ -44,15 +43,27 @@ const PopupList = () => {
   };
 
   //검색 버튼 클릭시 호출되는 함수
-  const onClickSearch = () => {
-    setSearchValue();
+  const onChangeSearch = () => {
+    const inputValue= document.getElementById('searchValue').value;
+    setSearchValue(inputValue);
+    sessionStorage.setItem("searchValue", inputValue);
     getPopupAPI();
   };
+
+  // <-----------------------[useEffect]-------------------------->
+  
+  // 페이지가 로드될 때 세션 스토리지에서 검색어를 가져옴
+  useEffect(() => {
+    const savedSearchValue = sessionStorage.getItem("searchValue");
+    if (savedSearchValue) {
+      setSearchValue(savedSearchValue);
+    }
+  }, []);
 
   useEffect(() => {
     console.log("category", filterValues.category);
     getPopupAPI();
-  }, [filterValues]);
+  }, [filterValues, searchValue]);
 
   if (popup.length == 0) {
     console.log("NO Popup DATA!!!!!!!");
@@ -69,14 +80,16 @@ const PopupList = () => {
             className="list-search"
             placeholder="search for anything"
             id="searchValue"
+            value={searchValue}
+            onChange={onChangeSearch}
           ></input>
-          <button className="searchBtn" type="button">
+          {/* <button className="searchBtn" type="button">
             <img
               src={require("../../assets/images/searchBtn.png")}
               alt="searchBtn"
               onClick={onClickSearch}
             />
-          </button>
+          </button> */}
         </div>
         <div className="list-container-wrapper">
           {popup.length > 0 ? (
