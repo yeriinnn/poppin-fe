@@ -90,6 +90,7 @@ const Main = () => {
         {top3Popups.map((popup, index) => (
           <TpBox
             key={index}
+            popupId={popup.popupId} // popupId를 전달
             imgSrc={popup.popupImage}
             productName={popup.popupName}
             popupPeriod={popup.popupPeriod}

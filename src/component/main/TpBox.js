@@ -1,7 +1,14 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom'; // react-router-dom에서 useNavigate를 import
 import './css/TpBox.css';
 
-const TpBox = ({ imgSrc, productName, popupPeriod, likeCount }) => {
+const TpBox = ({ popupId, imgSrc, productName, popupPeriod, likeCount }) => {
+  const navigate = useNavigate(); // useNavigate 훅 사용
+
+  const handleDetailClick = () => {
+    navigate(`/popupdetail/${popupId}`); // 상세 페이지로 이동
+  };
+
   return (
     <div className="tpbox">
       <img src={imgSrc} alt="Product" className="tpbox-img" />
@@ -12,7 +19,7 @@ const TpBox = ({ imgSrc, productName, popupPeriod, likeCount }) => {
       <div className="tpbox-inner">
         <div className="tpbox-name">{productName}</div>
         <div className="tpbox-date">{popupPeriod}</div>
-        <button className="tpbox-btn">상세보기</button>
+        <button className="tpbox-btn" onClick={handleDetailClick}>상세보기</button>
       </div>
     </div>
   );
