@@ -6,27 +6,27 @@ import dbjson from "./popupdb.json"; //임시 데이터
 import axios from "axios";
 
 const PopupList = () => {
-  const [popup, setPopup] = useState(null);
+  const [popup, setPopup] = useState([]);
   const [searchValue, setSearchValue] = useState(""); // 검색 값 상태
   const [filterValues, setFilterValues] = useState({
     category: {},
-    period: ""
+    period: "",
   });
-
 
   //팝업 가져오는 함수
   const getPopupAPI = async () => {
     try {
       const requestData = {
-        categories :
-          Object.keys(filterValues.category)
-          .filter(key => filterValues.category[key])
-          .map(key => `${encodeURIComponent(key)}=${encodeURIComponent(true)}`)
-          .join('&'),
+        categories: Object.keys(filterValues.category)
+          .filter((key) => filterValues.category[key])
+          .map(
+            (key) => `${encodeURIComponent(key)}=${encodeURIComponent(true)}`
+          )
+          .join("&"),
         period: filterValues.period,
         search: searchValue,
       };
-  
+
       const url = `http://localhost:8080/v1/popup/popuplist?${requestData.categories}&period=${requestData.period}&search=${requestData.search}`;
       const response = await axios.get(url);
       setPopup(response.data.data);
@@ -35,21 +35,20 @@ const PopupList = () => {
       console.error("Error fetching popup detail!!!!:", error);
     }
   };
-  
 
   //필터링 값 변경시 마다 호출되는 콜 백 함수
   const handleFilterChange = (newFilterValues) => {
-    console.log("newFilterValues", newFilterValues.selectedRadio);
     setFilterValues({
       category: newFilterValues.checkboxStates,
-      period: newFilterValues.selectedRadio
+      period: newFilterValues.selectedRadio,
     });
-    getPopupAPI();
   };
 
-  useEffect(() => {
-    setPopup(dbjson);
-  }, []); //종속성 배열
+  //검색 버튼 클릭시 호출되는 함수
+  const onClickSearch = () => {
+    setSearchValue();
+    getPopupAPI();
+  };
 
   useEffect(() => {
     console.log("category", filterValues.category);
@@ -57,8 +56,8 @@ const PopupList = () => {
     getPopupAPI();
   }, [filterValues]);
 
-  if (popup == null) {
-    return null;
+  if (popup.length == 0) {
+    console.log("NO Popup DATA!!!!!!!");
   }
 
   return (
@@ -71,28 +70,37 @@ const PopupList = () => {
           <input
             className="list-search"
             placeholder="search for anything"
+            id="searchValue"
           ></input>
           <button className="searchBtn" type="button">
-            <img src={require("../../assets/images/searchBtn.png")} alt="searchBtn" />
+            <img
+              src={require("../../assets/images/searchBtn.png")}
+              alt="searchBtn"
+              onClick={onClickSearch}
+            />
           </button>
         </div>
         <div className="list-container-wrapper">
-          <div className="list-container">
-            {popup.map((popup) => (
-              <PopupBox
-                id={popup.popupId}
-                name={popup.popupName}
-                period ={popup.popupPeriod}
-                image={popup.popupImage}
-                heart={popup.likeCount}
-              />
-            ))}
-            <div className="list-bottom">
-              <button className="moreBtn">Load more +</button>
+          {popup.length > 0 ? (
+            <div className="list-container">
+              {popup.map((popup) => (
+                <PopupBox
+                  id={popup.popupId}
+                  name={popup.popupName}
+                  period={popup.popupPeriod}
+                  image={popup.popupImage}
+                  heart={popup.likeCount}
+                />
+              ))}
+              <div className="list-bottom">
+                <button className="moreBtn">Load more +</button>
+              </div>
             </div>
-          </div>
+          ) :(
+            <div>No Data</div>
+          )}
           <div className="list-right right">
-            <PopupFilter onFilterChange={handleFilterChange}/>
+            <PopupFilter onFilterChange={handleFilterChange} />
           </div>
         </div>
       </div>
