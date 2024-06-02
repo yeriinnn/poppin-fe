@@ -5,6 +5,7 @@ import "swiper/swiper-bundle.css";
 import "./css/Main.css";
 import TpBox from "./TpBox";
 import WpBox from "./WpBox";
+import apiURLs from "../../apiURL";
 
 SwiperCore.use([Autoplay]);
 
@@ -16,7 +17,7 @@ const Main = () => {
   useEffect(() => {
     const fetchImages = async () => {
       try {
-        const response = await axios.get("http://localhost:8080/v1/popup/random-images");
+        const response = await axios.get( apiURLs+"/random-images");
         console.log("API response:", response.data); // 디버깅을 위해 응답을 출력합니다.
         if (response.data && response.data.data && Array.isArray(response.data.data.popupImgUrls)) {
           setImages(response.data.data.popupImgUrls);
@@ -34,7 +35,7 @@ const Main = () => {
   useEffect(() => {
     const fetchTop3Popups = async () => {
       try {
-        const response = await axios.get("http://localhost:8080/v1/popup/top3");
+        const response = await axios.get( apiURLs+"/top3");
         console.log("Top3 API response:", response.data);
         if (response.data && Array.isArray(response.data.data)) {
           setTop3Popups(response.data.data);
@@ -52,7 +53,7 @@ const Main = () => {
   useEffect(() => {
     const fetchInProgressPopups = async () => {
       try {
-        const response = await axios.get("http://localhost:8080/v1/popup/in-progress");
+        const response = await axios.get( apiURLs+"/in-progress");
         console.log("In-Progress Popups API response:", response.data);
         if (response.data && Array.isArray(response.data.data)) {
           setInProgressPopups(response.data.data);
