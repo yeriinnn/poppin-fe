@@ -9,8 +9,8 @@ const ChatBox = () => {
         const fetchData = async () => {
             console.log("Fetching data..."); // 데이터를 가져오는 시작 시점에 로그 출력
             try {
-                const response = await axios.get("http://localhost:8080/v1/chat/userchatlist", {
-                    params: { userId: 1 }
+                const response = await axios.get(live, {
+                    params: { userId}
                 });
                 console.log("API response - 유저 채팅 리스트 불러오기:", response.data); // API 응답 데이터 로그 출력
                 setChatList(response.data.data); // 가져온 데이터를 상태에 저장
